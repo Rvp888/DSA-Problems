@@ -41,7 +41,6 @@ console.log(xoringSubArrays(arr2));
 
 
 
-
 // XOR concept:
 
 // Decimal to Binary conversion:

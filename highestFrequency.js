@@ -25,3 +25,23 @@
 // Type 5: 1
 
 // Both Type 3 and Type 4 have a frequency of 3, and the lower of those is Type 3.
+
+
+function highestFrequency(arr) {
+
+    let obj = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        if (obj[arr[i]]) {
+            obj[arr[i]]++;
+        }
+        else {
+            obj[arr[i]] = 1;
+        }
+    }
+
+    let maxFrequency = 1;
+    let ans;
+
+    
+}

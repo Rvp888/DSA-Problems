@@ -56,3 +56,4 @@ function highestFrequency(arr) {
 
 console.log(highestFrequency([1,1,2,2,3]));
 
+console.log(highestFrequency([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]));

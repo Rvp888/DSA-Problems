@@ -43,5 +43,12 @@ function highestFrequency(arr) {
     let maxFrequency = 1;
     let ans;
 
-    
+    for (let item in obj) {
+        if (obj[item] > maxFrequency) {
+            maxFrequency = obj[item];
+            ans = item;
+        }
+    }
+
+    return ans;
 }

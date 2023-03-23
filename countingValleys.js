@@ -23,6 +23,7 @@
 
 
 function countingValleys(steps, path) {
+    
     let ans = 0;
     let stack = [];
 
@@ -36,6 +37,18 @@ function countingValleys(steps, path) {
             }
         }
 
-        
-        
+        if(path[i] === 'U'){
+            if(stack[stack.length-1] === 'D'){
+                stack.pop();
+                if(stack.length === 0){
+                    ans++;
+                }
+            }
+            else {
+                stack.push(path[i]);
+            }
+        }
+    }
+
+    return ans;
 }

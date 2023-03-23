@@ -20,3 +20,22 @@
 // The hiker first enters a valley 2 units deep. Then they climb out and up onto a mountain 2 units high. 
 // Finally, the hiker returns to sea level and ends the hike. Total valley covered is 1.
 // Ans = 1;
+
+
+function countingValleys(steps, path) {
+    let ans = 0;
+    let stack = [];
+
+    for(let i = 0; i < steps; i++){
+        if(path[i] === 'D'){
+            if(stack[stack.length-1] === 'U'){
+                stack.pop();
+            }
+            else {
+                stack.push(path[i]);
+            }
+        }
+
+        
+        
+}

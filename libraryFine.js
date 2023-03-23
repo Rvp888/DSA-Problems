@@ -38,6 +38,13 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
     if (y1 - y2 > 0) {
         ans += 10000 * (y1 - y2);
     }
+    else if(y1 == y2) {
+        if(m1 - m2 > 0) {
+            ans += 500 * (m1 - m2);
+        }
+        
+    }
+
     
 }
 

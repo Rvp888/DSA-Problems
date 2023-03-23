@@ -11,3 +11,12 @@
 // => A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level 
 // and ending with a step up to sea level.
 
+// Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.
+
+// Example:
+// steps = 8
+// path = 'D D U U U U D D'
+
+// The hiker first enters a valley 2 units deep. Then they climb out and up onto a mountain 2 units high. 
+// Finally, the hiker returns to sea level and ends the hike. Total valley covered is 1.
+// Ans = 1;

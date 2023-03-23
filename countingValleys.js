@@ -23,7 +23,7 @@
 
 
 function countingValleys(steps, path) {
-    
+
     let ans = 0;
     let stack = [];
 
@@ -52,3 +52,5 @@ function countingValleys(steps, path) {
 
     return ans;
 }
+
+console.log(countingValleys(8, 'D U U D D D U U'));

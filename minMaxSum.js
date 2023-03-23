@@ -9,3 +9,20 @@
 
 // The minimum sum is 1 + 3 + 5 + 7 = 16  and the maximum sum is 3 + 5 + 7 + 9 = 24. 
 // The function prints :- 16 24
+
+
+function minMaxSum(arr) {
+    arr.sort();
+    let minSum = 0;
+    let maxSum = 0;
+
+    for(let i = 0; i < arr.length-1; i++){
+        minSum += arr[i];
+    }
+
+    for(let i = 1; i < arr.length; i++){
+        maxSum += arr[i];
+    }
+
+    
+}

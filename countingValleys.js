@@ -15,7 +15,7 @@
 
 // Example:
 // steps = 8
-// path = 'D D U U U U D D'
+// path = 'DDUUUUDD'
 
 // The hiker first enters a valley 2 units deep. Then they climb out and up onto a mountain 2 units high. 
 // Finally, the hiker returns to sea level and ends the hike. Total valley covered is 1.
@@ -36,10 +36,10 @@ function countingValleys(steps, path) {
                 stack.push(path[i]);
             }
         }
-
-        if(path[i] === 'U'){
+        else if(path[i] === 'U'){
             if(stack[stack.length-1] === 'D'){
                 stack.pop();
+                console.log(stack);
                 if(stack.length === 0){
                     ans++;
                 }
@@ -53,4 +53,4 @@ function countingValleys(steps, path) {
     return ans;
 }
 
-console.log(countingValleys(8, 'D U U D D D U U'));
+console.log(countingValleys(8, 'DUDUDUDU'));

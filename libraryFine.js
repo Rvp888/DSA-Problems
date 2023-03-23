@@ -42,7 +42,9 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
         if(m1 - m2 > 0) {
             ans += 500 * (m1 - m2);
         }
-        
+        else if(m1 == m2 && d1 -d2 > 0) {
+            ans += 15 * (d1 - d2)
+        }
     }
 
     

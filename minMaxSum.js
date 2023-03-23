@@ -26,3 +26,5 @@ function minMaxSum(arr) {
 
     console.log(minSum + " " + maxSum);
 }
+
+minMaxSum([1,3,5,7,9]);

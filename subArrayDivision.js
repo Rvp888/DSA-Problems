@@ -24,7 +24,6 @@ function subArrayDivision(arr, d, m) {
     let ans = 0;
     if(arr.length === 1 && arr[0] === d){
         ans++;
-        return ans;
     }
 
     for(let i = 0; i < arr.length - m; i++){

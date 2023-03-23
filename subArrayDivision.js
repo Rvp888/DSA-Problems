@@ -39,3 +39,5 @@ function subArrayDivision(arr, d, m) {
 
     return ans;
 }
+
+console.log(subArrayDivision([4], 4, 1));

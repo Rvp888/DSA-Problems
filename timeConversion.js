@@ -22,7 +22,9 @@ function timeConversion(str) {
         }
         return str.slice(0, str.length-2);
     }
-    
+    else if(str.includes('PM')){
+        
+    }
 }
 
 console.log(timeConversion());

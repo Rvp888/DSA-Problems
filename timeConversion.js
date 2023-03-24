@@ -32,5 +32,7 @@ function timeConversion(str) {
     }
 }
 
-console.log(timeConversion('12:01:00PM'));
+console.log(timeConversion('08:01:00PM'));
 console.log(timeConversion('12:01:00AM'));
+console.log(timeConversion('12:12:00PM'));
+console.log(timeConversion('12:12:00AM'));

@@ -32,3 +32,4 @@ function timeConversion(str) {
     }
 }
 
+console.log(timeConversion('12:01:00PM'));

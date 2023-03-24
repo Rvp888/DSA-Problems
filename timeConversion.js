@@ -32,4 +32,3 @@ function timeConversion(str) {
     }
 }
 
-console.log(timeConversion());

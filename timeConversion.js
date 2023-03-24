@@ -23,6 +23,11 @@ function timeConversion(str) {
         return str.slice(0, str.length-2);
     }
     else if(str.includes('PM')){
+        if(!str.startsWith('12')){
+            let temp = str.slice(0, 2);
+            temp = Number(temp) + 12;
+            return temp + str.slice(2, str.length-2);
+        }
         
     }
 }

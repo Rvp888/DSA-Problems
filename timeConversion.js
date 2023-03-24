@@ -28,7 +28,7 @@ function timeConversion(str) {
             temp = Number(temp) + 12;
             return temp + str.slice(2, str.length-2);
         }
-        
+        return str.slice(0, str.length-2);
     }
 }
 

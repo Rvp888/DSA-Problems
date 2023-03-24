@@ -13,3 +13,16 @@
 
 // s = '12:01:00AM'
 // Return '00:01:00'.
+
+
+function timeConversion(str) {
+    if(str.includes('AM')){
+        if(str.startsWith('12')){
+            str = str.replace('12', '00');
+        }
+        return str.slice(0, str.length-2);
+    }
+    
+}
+
+console.log(timeConversion());

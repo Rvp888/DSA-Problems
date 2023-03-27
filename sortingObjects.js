@@ -54,3 +54,4 @@ function sortUsers(userArr) {
     return userArr;
 }
 
+console.log(sortUsers(users));

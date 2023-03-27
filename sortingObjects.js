@@ -5,24 +5,24 @@
 // b. decreasing order
 
 // Example:
-// const users = [
-//     {
-//         firstName: 'Rohan',
-//         lastName: 'Palankar'
-//     },
-//     {
-//         firstName: 'Abhi',
-//         lastName: 'Anvekar'
-//     },
-//     {
-//         firstName: 'Aditya',
-//         lastName: 'Revankar'
-//     },
-//     {
-//         firstName: 'Rahul',
-//         lastName: 'Bhat'
-//     }
-// ]
+const users = [
+    {
+        firstName: 'Rohan',
+        lastName: 'Palankar'
+    },
+    {
+        firstName: 'Abhi',
+        lastName: 'Anvekar'
+    },
+    {
+        firstName: 'Aditya',
+        lastName: 'Revankar'
+    },
+    {
+        firstName: 'Rahul',
+        lastName: 'Bhat'
+    }
+]
 
 // Ans:    [
 //             {
@@ -44,16 +44,31 @@
 //         ]
 
 
-function sortUsers_1(userArr) {
+// function sortUsers_1(userArr) {
+//     userArr.sort((a,b) => {
+//         if(a.lastName < b.lastName) {
+//             return -1;
+//         }
+//         else if(a.lastName > b.lastName) {
+//             return 1;
+//         }
+//     })
+//     return userArr;
+// }
+
+// console.log(sortUsers_1(users));
+
+
+function sortUsers_2(userArr) {
     userArr.sort((a,b) => {
         if(a.lastName < b.lastName) {
-            return -1;
+            return 1;
         }
         else if(a.lastName > b.lastName) {
-            return 1;
+            return -1;
         }
     })
     return userArr;
 }
 
-console.log(sortUsers_1(users));
+console.log(sortUsers_2(users));

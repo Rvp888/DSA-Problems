@@ -44,7 +44,7 @@
 //         ]
 
 
-function sortUsers(userArr) {
+function sortUsers_1(userArr) {
     userArr.sort((a,b) => {
         if(a.lastName < b.lastName) {
             return -1;
@@ -56,4 +56,4 @@ function sortUsers(userArr) {
     return userArr;
 }
 
-console.log(sortUsers(users));
+console.log(sortUsers_1(users));

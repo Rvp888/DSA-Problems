@@ -22,3 +22,23 @@
 //     }
 // ]
 
+// Ans:    [
+//             {
+//                 firstName: 'Abhi',
+//                 lastName: 'Anvekar'     
+//             },
+//             {
+//                 firstName: 'Rahul',
+//                 lastName: 'Bhat'
+//             },
+//             {
+//                 firstName: 'Rohan',
+//                 lastName: 'Palankar'
+//             },
+//             {
+//                 firstName: 'Aditya',
+//                 lastName: 'Revankar'
+//             }
+//         ]
+
+

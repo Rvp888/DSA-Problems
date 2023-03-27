@@ -1,6 +1,8 @@
 
 // Problem: 
 // Given an array of users (objects), sort them according to their last names. 
+// a. increasing order
+// b. decreasing order
 
 // Example:
 // const users = [

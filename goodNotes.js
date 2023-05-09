@@ -38,3 +38,4 @@ console.log(goodNote([
     { name: "Jane", notes: [20, 5, 11] },
     { name: "Johny", notes: [10, 16, 8] }
 ]));
+

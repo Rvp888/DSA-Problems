@@ -20,3 +20,5 @@ function right_stars_pattern(n) {
 
 console.log(right_stars_pattern(8));
 
+
+

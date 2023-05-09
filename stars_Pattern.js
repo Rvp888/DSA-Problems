@@ -11,3 +11,4 @@ function stars_Pattern (n) {
 }
 
 console.log(stars_Pattern(5));
+

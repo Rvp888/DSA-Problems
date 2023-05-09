@@ -23,3 +23,4 @@ function middle_stars_pattern (n) {
 }
 
 console.log(middle_stars_pattern(5));
+

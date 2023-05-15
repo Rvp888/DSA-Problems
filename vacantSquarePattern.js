@@ -31,3 +31,4 @@ function vacantSquare (n) {
 }
 
 console.log(vacantSquare(5));
+

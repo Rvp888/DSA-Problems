@@ -34,4 +34,5 @@ function cleavagePattern (n) {
 
 }
 
-console.log(cleavagePattern(5));
+console.log(cleavagePattern(10));
+

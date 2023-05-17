@@ -26,3 +26,5 @@ function findIndex (arr, target) {
     return -1;
 
 }
+
+console.log(findIndex([4, 5, 6, 7, 0, 1, 2], 1));

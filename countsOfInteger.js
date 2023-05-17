@@ -66,3 +66,4 @@ function lastIndex (array, value, start) {
     return lastIndex;
 
 }
+

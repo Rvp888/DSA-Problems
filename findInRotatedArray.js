@@ -15,6 +15,14 @@ function findIndex (arr, target) {
         if (arr[mid] === target) {
             return mid;
         }
+        else if (target > arr[mid] || target <= arr[arr.length-1] && arr[mid] >= arr[arr.length-1]) {
+            start = mid + 1;
+        }
+        else {
+            end = mid - 1;
+        }
     }
+
+    return -1;
 
 }

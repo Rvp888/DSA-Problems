@@ -11,15 +11,36 @@
 // Output: 8.
 
 
-// Solution:
+// Solution-1:
 
-var missingNumber = function(nums) {
+// let missingNumber = function(nums) {
+//     let size = nums.length;
+//     for (let i = 0; i <= size; i++) {
+//         if (!nums.includes(i)) {
+//             return i;
+//         }
+//     }
+// };
+
+// console.log(missingNumber([9,6,4,2,3,5,7,0,1]));
+
+
+// Solution-2:
+
+let missingNumber = function(nums) {
+
+    let missingNum;
     let size = nums.length;
-    for (let i = 0; i <= size; i++) {
-        if (!nums.includes(i)) {
-            return i;
-        }
+    let expectedSum = size * (size+1) / 2;
+    let realSum = 0;
+
+    for (let i = 0; i < size; i++) {
+        realSum += nums[i];
     }
-};
+
+    return missingNum = expectedSum - realSum;
+
+}
 
 console.log(missingNumber([9,6,4,2,3,5,7,0,1]));
+

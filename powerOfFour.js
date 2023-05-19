@@ -14,7 +14,7 @@
 // Input: n = 1
 // Output: true
 
-// Solution:
+// Solution-1:
 
 // function powerOfFour (n) {
 
@@ -36,22 +36,35 @@
 // console.log(powerOfFour(32));
 
 
+// Solution-2:
 
+// function powerOfFour (n) {
+//     if (n === 1) return true;
+
+//     if ((n & (n-1)) === 0 && (n % 10 === 4 || n % 10 === 6)) {
+//         return true;
+//     }
+
+//     return false;
+// }
+
+// console.log(powerOfFour(16));
+
+
+
+// Solution-3:
 
 function powerOfFour (n) {
-    if (n === 1) return true;
 
-    if ((n & (n-1)) === 0 && (n % 10 === 4 || n % 10 === 6)) {
+    n = n.toString(2);
+
+    if (n[0] === "1" && n.length % 2 !== 0 && n.indexOf("1", 1) === -1) {
         return true;
     }
 
     return false;
+
 }
 
-console.log(powerOfFour(16));
-
-
-
-
-
+console.log(powerOfFour(32));
 

@@ -16,21 +16,42 @@
 
 // Solution:
 
+// function powerOfFour (n) {
+
+//     if (n % 4 !== 0 && n !== 1) return false;
+
+//     for (let i = 0; i < n; i++) {
+//         if (4**i === n) {
+//             return true;
+//         }
+//         else if (4**i > n) {
+//             return false;
+//         }
+//     }
+
+//     return false;
+
+// }
+
+// console.log(powerOfFour(32));
+
+
+
+
 function powerOfFour (n) {
+    if (n === 1) return true;
 
-    if (n % 4 !== 0 && n !== 1) return false;
-
-    for (let i = 0; i < n; i++) {
-        if (4**i === n) {
-            return true;
-        }
-        else if (4**i > n) {
-            return false;
-        }
+    if ((n & (n-1)) === 0 && (n % 10 === 4 || n % 10 === 6)) {
+        return true;
     }
 
     return false;
-
 }
 
-console.log(powerOfFour(32));
+console.log(powerOfFour(16));
+
+
+
+
+
+

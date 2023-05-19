@@ -15,3 +15,22 @@
 // Output: true
 
 // Solution:
+
+function powerOfFour (n) {
+
+    if (n % 4 !== 0 && n !== 1) return false;
+
+    for (let i = 0; i < n; i++) {
+        if (4**i === n) {
+            return true;
+        }
+        else if (4**i > n) {
+            return false;
+        }
+    }
+
+    return false;
+
+}
+
+console.log(powerOfFour(32));

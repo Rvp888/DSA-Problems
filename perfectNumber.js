@@ -17,21 +17,38 @@
 // Output: false
 
 
-// Solution:
+// Solution-1:
+
+// function isPerfectNumber (num) {
+
+//     let sum = 0;
+//     for (let i = 1; i <= num/2; i++) {
+//         if (num % i === 0) {
+//             sum += i;
+//         }
+//     }
+//     if (sum === num) {
+//         return true;
+//     }
+//     return false;
+
+// }
+
+// console.log(isPerfectNumber(7));
+
+
+// Solution-2:
 
 function isPerfectNumber (num) {
+    let sum = 1;
 
-    let sum = 0;
-    for (let i = 1; i <= num/2; i++) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) {
-            sum += i;
+            sum = sum + i + (num/i);
         }
     }
-    if (sum === num) {
-        return true;
-    }
-    return false;
 
+    return num > 1 && sum === num;
 }
 
-console.log(isPerfectNumber(7));
+console.log(isPerfectNumber(28));

@@ -42,3 +42,6 @@ function groupAnagrams (strs) {
 }
 
 console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]));
+
+
+

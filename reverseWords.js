@@ -10,4 +10,36 @@
 // Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string 
 // should only have a single space separating the words. Do not include any extra spaces.
 
+// Example 1:
+// Input: s = "the sky is blue"
+// Output: "blue is sky the"
+
+// Example 2:
+// Input: s = "  hello world  "
+// Output: "world hello"
+// Explanation: Your reversed string should not contain leading or trailing spaces.
+
+// Example 3:
+// Input: s = "a good   example"
+// Output: "example good a"
+// Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+
+
+// Solution: 
+
+function reverseWords (str) {
+
+    str = str.split(" ");
+
+    for (let i = str.length-1; i >= 0; i--) {
+        if (str[i] === "") {
+            str.splice(i, 1);
+        }
+    }
+
+    return str.reverse().join(" ");
+
+}
+
+console.log(reverseWords("  hello world  "));
 

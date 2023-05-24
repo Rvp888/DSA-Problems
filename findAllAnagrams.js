@@ -46,3 +46,5 @@ function findAnagrams (string, pattern) {
     return result;
 
 }
+
+console.log(findAnagrams("cbaebabacd", "abc"));

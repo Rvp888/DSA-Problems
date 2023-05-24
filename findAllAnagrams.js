@@ -20,3 +20,29 @@
 // The substring with start index = 0 is "ab", which is an anagram of "ab".
 // The substring with start index = 1 is "ba", which is an anagram of "ab".
 // The substring with start index = 2 is "ab", which is an anagram of "ab".
+
+
+// Solution:
+
+function findAnagrams (string, pattern) {
+
+    let result = [];
+    let anagrams = {};
+
+    for (let i = 0; i <= string.length-pattern.length; i++) {
+        let subString = string.slice(i, i+pattern.length);
+        if (anagrams[subString]) {
+            result.push(i);
+            continue;
+        }
+        let sortSubStr = subString.split("").sort().join("");
+        pattern = pattern.split("").sort().join("");
+        if (sortSubStr === pattern) {
+            result.push(i);
+            anagrams[subString] = true;
+        }
+    }
+
+    return result;
+
+}

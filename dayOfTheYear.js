@@ -23,5 +23,24 @@ function dayOfYear (date) {
     let dateDays = Number(date.slice(8,10));
     let month = Number(date.slice(5,7));
     let year = Number(date.slice(0,4));
+    let monthDays = 0;
+
+    for (let i = 0; i < month-1; i++) {
+        monthDays += monthDaysArr[i];
+    }
+
+    dayNumber = dateDays + monthDays;
+
+    for (let i = 1904; i < 2020; i += 4) {
+        if (i === year) {
+            isLeapYear = true;
+        }
+    } 
+
+    if (isLeapYear && month > 2) {
+        dayNumber += 1;
+    }
+
+    return dayNumber;
 
 }

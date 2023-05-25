@@ -12,3 +12,12 @@
 // Input: date = "2019-02-10"
 // Output: 41
 
+
+// Solution:
+
+function dayOfYear (date) {
+
+    let dayNumber = 0;
+    let isLeapYear = false;
+
+}

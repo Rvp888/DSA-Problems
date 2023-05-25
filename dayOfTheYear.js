@@ -44,3 +44,6 @@ function dayOfYear (date) {
     return dayNumber;
 
 }
+
+console.log(dayOfYear("2004-03-01"));
+

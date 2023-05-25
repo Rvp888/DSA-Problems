@@ -1,7 +1,7 @@
 
 // Day of the Year
 
-// Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.
+// Given a string date representing a 'Gregorian calendar' date formatted as YYYY-MM-DD, return the day number of the year.
 
 // Example 1:
 // Input: date = "2019-01-09"
@@ -11,6 +11,9 @@
 // Example 2:
 // Input: date = "2019-02-10"
 // Output: 41
+
+// Constraints:
+// 'date' represents a calendar date between Jan 1st, 1900 and Dec 31th, 2019.
 
 
 // Solution:

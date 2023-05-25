@@ -19,5 +19,9 @@ function dayOfYear (date) {
 
     let dayNumber = 0;
     let isLeapYear = false;
+    let monthDaysArr = [31,28,31,30,31,30,31,31,30,31,30,31];
+    let dateDays = Number(date.slice(8,10));
+    let month = Number(date.slice(5,7));
+    let year = Number(date.slice(0,4));
 
 }

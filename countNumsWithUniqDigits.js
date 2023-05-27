@@ -1,7 +1,7 @@
 
 // Count Numbers with Unique Digits:
 
-// Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.
+// Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10**n.
 
  
 // Example 1:
@@ -12,3 +12,13 @@
 // Example 2:
 // Input: n = 0
 // Output: 1
+
+// Solution:
+
+function countNumbersWithUniqueDigits (n) {
+
+    if (n === 0) {
+        return 1;
+    }
+
+}

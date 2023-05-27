@@ -28,4 +28,10 @@ function countNumbersWithUniqueDigits (n) {
         ans += base;
     }
 
+    return ans;
+
 }
+
+console.log(countNumbersWithUniqueDigits(2));
+
+

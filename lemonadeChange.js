@@ -52,9 +52,12 @@ var lemonadeChange = function(bills) {
                 fives--;
                 tens--;
             }
-            
+            else {
+                fives -= 3;
+            }
+            twenties++;
         }
-        
+        if (fives < 0) return false;
 
     }
 

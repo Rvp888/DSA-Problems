@@ -19,3 +19,25 @@
 // Input: x = 8
 // Output: 2
 // Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
+
+
+// Solution:
+
+var mySqrt = function(x) {
+    let left = 1, right = left + Math.floor((x - left)/2);
+    while (left <= right) {
+        let mid = left + Math.floor((right - left)/2);
+        if (mid * mid === x) {
+            return mid;
+        }
+        else if (mid * mid > x) {
+            right = mid-1;
+        }
+        else {
+            left = mid + 1;
+        }
+    }
+    return right;
+};
+
+console.log(mySqrt(18));

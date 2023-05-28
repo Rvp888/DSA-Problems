@@ -50,4 +50,4 @@ var findTheDistanceValue = function(arr1, arr2, d) {
     return result;
 };
 
-console.log(findTheDistanceValue([2,1,100,3], [-5,-2,10,-3,7], d = 6));
+console.log(findTheDistanceValue([1,4,2,3], [-4,-3,6,10,20,30], d = 3));

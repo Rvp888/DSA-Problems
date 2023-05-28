@@ -40,6 +40,13 @@ var lemonadeChange = function(bills) {
 
     for(let i=0;i < bills.length;i++){
         
+        if(bills[i] === 5){
+            fives++;
+        }
+        else if(bills[i] === 10){
+            fives--;
+            tens++;
+        }
         
 
     }

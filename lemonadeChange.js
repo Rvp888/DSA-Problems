@@ -47,6 +47,13 @@ var lemonadeChange = function(bills) {
             fives--;
             tens++;
         }
+        else if(bills[i] === 20){
+            if (tens) {
+                fives--;
+                tens--;
+            }
+            
+        }
         
 
     }

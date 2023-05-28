@@ -42,4 +42,4 @@ var targetIndices = function(nums, target) {
     return result;
 };
 
-console.log()
+console.log(targetIndices([1,2,5,2,3], 2));

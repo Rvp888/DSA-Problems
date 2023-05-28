@@ -61,5 +61,7 @@ var lemonadeChange = function(bills) {
 
     }
 
+    return (fives*5 + tens*10 + twenties*20) === (5*bills.length);
+
 };
 

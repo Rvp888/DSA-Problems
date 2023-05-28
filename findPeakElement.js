@@ -19,3 +19,22 @@
 // Input: nums = [1,2,1,3,5,6,4]
 // Output: 5
 // Explanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
+
+
+// Solution:
+
+var findPeakElement = function(nums) {
+    let n = nums.length;
+    if (n === 1) return 0;
+    for (let i = 0; i < n; i++) {
+        if (i === 0 && nums[i] > nums[i+1]) {
+            return i;
+        }
+        if (nums[i] > nums[i-1] && nums[i] > nums[i+1]) {
+            return i;
+        }
+        if (i === n-1 && nums[i] > nums[i-1]) {
+            return i;
+        }
+    }
+};

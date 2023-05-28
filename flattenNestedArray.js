@@ -41,3 +41,25 @@
 // Explanation
 // The maximum depth of any subarray is 1. Thus, all of them are flattened.
 
+
+// Solution:
+
+// var flat = function (arr, n) {
+
+//     let newArray = [];
+//     flattenTheArray (arr,n);
+
+//     function flattenTheArray (arr,n) {
+//         for (let i = 0; i < arr.length; i++) {
+//             if (Array.isArray(arr[i]) && n > 0) {
+//                 flattenTheArray (arr[i], n-1);
+//             }
+//             else {
+//                 newArray.push(arr[i]);
+//             }
+//         }
+//     }
+
+//     return newArray;
+
+// };

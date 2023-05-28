@@ -50,3 +50,5 @@ var constructRectangle = function(area) {
 
     return ans;
 };
+
+console.log(constructRectangle(122122));

@@ -30,8 +30,8 @@ function countNumbersWithUniqueDigits (n) {
 
     return ans;
 
-}
+};
 
-console.log(countNumbersWithUniqueDigits(2));
+console.log(countNumbersWithUniqueDigits(3));
 
 

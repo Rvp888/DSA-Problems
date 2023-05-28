@@ -38,3 +38,6 @@ var findPeakElement = function(nums) {
         }
     }
 };
+
+console.log(findPeakElement([1,2,3,1]));
+

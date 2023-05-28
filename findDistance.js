@@ -51,3 +51,4 @@ var findTheDistanceValue = function(arr1, arr2, d) {
 };
 
 console.log(findTheDistanceValue([1,4,2,3], [-4,-3,6,10,20,30], d = 3));
+

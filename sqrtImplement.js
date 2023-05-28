@@ -40,4 +40,4 @@ var mySqrt = function(x) {
     return right;
 };
 
-console.log(mySqrt(18));
+console.log(mySqrt(24));

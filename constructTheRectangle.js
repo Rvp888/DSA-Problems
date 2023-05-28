@@ -24,3 +24,29 @@
 // Input: area = 122122
 // Output: [427,286]
 
+
+// Solution:
+
+var constructRectangle = function(area) {
+    // let sqrtArea = Math.sqrt(area);
+    // if (Number.isInteger(sqrtArea)) {
+    //     return [sqrtArea, sqrtArea];
+    // }
+
+    let ans = [area, 1];
+    for (let i = 1; i <= area/2; i++) {
+        if (i === ans[0]) return ans;
+        if (area % i === 0) {
+            let temp = [i, area/i];
+            if (i < area/i) temp = [area/i, i];
+            if ((temp[0]-temp[1]) < (ans[0]-ans[1])) {
+                ans = [temp[0], temp[1]];
+            }
+        }
+        if ((ans[0]-ans[1]) === 0) {
+            return ans;
+        }
+    }
+
+    return ans;
+};

@@ -25,3 +25,21 @@
 // Output: [4]
 // Explanation: After sorting, nums is [1,2,2,3,5].
 // The index where nums[i] == 5 is 4.
+
+
+// Solution:
+
+var targetIndices = function(nums, target) {
+    let result = [];
+    nums = nums.sort((a,b) => a-b);
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === target) {
+            result.push(i);
+        }
+    }
+
+    return result;
+};
+
+console.log()

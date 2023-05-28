@@ -30,4 +30,15 @@
 // Since not every customer received the correct change, the answer is false.
 
 
+// Solution:
+
+var lemonadeChange = function(bills) {
+    
+    let fives = 0;
+    let tens = 0;
+    let twenties = 0;
+
+    
+
+};
 

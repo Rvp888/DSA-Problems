@@ -38,7 +38,11 @@ var lemonadeChange = function(bills) {
     let tens = 0;
     let twenties = 0;
 
-    
+    for(let i=0;i < bills.length;i++){
+        
+        
+
+    }
 
 };
 

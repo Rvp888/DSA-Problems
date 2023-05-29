@@ -29,17 +29,32 @@
 // Explanation: There are no elements to be chunked so an empty array is returned.
 
 
-// Solution:
+// Solution-1:
+
+// var chunk = function(arr, size) {
+//     let chunkedArray = [];
+//     for (let i = 0; i < arr.length; i = i+size) {
+//         let chunk = arr.slice(i, i+size);
+//         chunkedArray.push(chunk);
+//     }
+//     return chunkedArray;
+// };
+
+// console.log(chunk([1,9,6,3,2], 3));
+
+
+// Solution-2:
 
 var chunk = function(arr, size) {
     let chunkedArray = [];
     for (let i = 0; i < arr.length; i = i+size) {
-        let chunk = arr.slice(i, i+size);
+        let chunk = [];
+        for (let j = i; j < i+size && j < arr.length; j++) {
+            chunk.push(arr[j]);
+        }
         chunkedArray.push(chunk);
     }
     return chunkedArray;
 };
 
 console.log(chunk([1,9,6,3,2], 3));
-
-

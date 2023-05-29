@@ -18,3 +18,9 @@
 // As we cannot use any three side lengths to form a triangle of non-zero area, we return 0.
 
 
+// Solution:
+
+// Triangle Rule:
+// The sum of lengths of two sides should always be greater than the length of the third side.
+
+

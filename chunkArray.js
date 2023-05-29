@@ -40,5 +40,6 @@ var chunk = function(arr, size) {
     return chunkedArray;
 };
 
+console.log(chunk([1,9,6,3,2], 3));
 
 

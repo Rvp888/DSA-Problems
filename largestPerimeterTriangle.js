@@ -25,14 +25,14 @@
 
 
 var largestPerimeter = function(nums) {
-    nums = nums.sort((a,b) => b-a);
+    nums = nums.sort((a,b) => b-a);    // sorting in descending order, inorder to return the largest perimeter of a triangle
 
     for (let i = 0; i <  nums.length - 2; i++) {
-        if (nums[i] < (nums[i+1]+nums[i+2])) {
-            return nums[i]+nums[i+1]+nums[i+2];
+        if (nums[i] < (nums[i+1] + nums[i+2])) {
+            return nums[i] + nums[i+1] + nums[i+2];
         }
     }
-    
+
     return 0;
 };
 

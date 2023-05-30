@@ -30,6 +30,7 @@
 // On the third turn, ans[2] += 3, and the array is [1,2,3].
 // On the fourth turn, ans[0] += 4, and the final array is [5,2,3].
 
+// Leetcode link-  https://leetcode.com/problems/distribute-candies-to-people/description/
 
 // Solution:
 

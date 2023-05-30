@@ -56,3 +56,4 @@ var sumFourDivisors = function(nums) {
     return result;
 };
 
+console.log(sumFourDivisors([21,4,7]));

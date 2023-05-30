@@ -31,3 +31,29 @@
 // On the fourth turn, ans[0] += 4, and the final array is [5,2,3].
 
 
+// Solution:
+
+var distributeCandies = function(candies, num_people) {
+
+    let result = [];
+    let j = 0;
+    let d = 1;
+ 
+    for (let i = 0; i < num_people; i++) {
+      if (result[i % num_people] === undefined) result[i % num_people] = 0;
+    }
+ 
+    while(candies > 0) {
+      result[j % num_people] += Math.min(d, candies);
+      j++;
+      candies -= d;
+      d++;
+    }
+     
+    return result;
+ 
+};
+
+console.log(distributeCandies(10, 3));
+
+

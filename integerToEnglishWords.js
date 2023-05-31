@@ -55,3 +55,6 @@ const numberToWords = function(num) {
     
     return groups.reverse().join(' ').trim();
 };
+
+
+console.log(numberToWords(3999999));

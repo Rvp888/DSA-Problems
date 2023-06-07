@@ -21,3 +21,20 @@
 // Output: 2
 // Explanation: We can move the two chips at position  3 to position 2. Each move has cost = 1. The total cost = 2.
 
+
+// Solution:
+
+var minCostToMoveChips = function(position) {
+    let even = 0;
+    let odd = 0;
+
+    for (let ele of position) {
+        if (ele % 2 === 0) {
+            even++;
+            continue;
+        }
+        odd++;
+    }
+
+    return Math.min(even, odd);
+};

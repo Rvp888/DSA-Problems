@@ -38,3 +38,6 @@ var minCostToMoveChips = function(position) {
 
     return Math.min(even, odd);
 };
+
+console.log(minCostToMoveChips([2,2,2,3,3]));
+

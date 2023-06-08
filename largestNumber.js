@@ -15,3 +15,21 @@
 // Output: "9534330"
 
 
+// Solution:
+
+let largestNumber = function (nums) {
+
+    let sortedNums = nums.sort((a, b) => {
+        let ab = a.toString() + b.toString();
+        let ba = b.toString() + a.toString();
+
+        return ba - ab;
+    })
+
+    let resultString = sortedNums.join("");
+
+    if (Number(resultString) === 0) return "0";
+
+    return resultString;
+
+}

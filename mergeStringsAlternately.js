@@ -49,3 +49,7 @@ var mergeAlternately = function(word1, word2) {
 
     return output;
 };
+
+console.log(mergeAlternately("ab", "pqrs"));
+
+

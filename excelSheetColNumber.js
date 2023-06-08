@@ -39,4 +39,10 @@ let titleToNumber = function(columnTitle) {
 
     if (columnTitle.length === 1) return letters[columnTitle];
 
+    columnTitle.split("").forEach((letter, index, arr) => {
+        result += letters[letter] * (Math.pow(26, arr.length - 1 - index));
+    });
+
+    return result;
+
 }

@@ -20,3 +20,32 @@
 // word1:  a   b 
 // word2:    p   q   r   s
 // merged: a p b q   r   s
+
+// Solution:
+
+var mergeAlternately = function(word1, word2) {
+    let l1 = word1.length;
+    let l2 = word2.length;
+    let i = 0, j = 0;
+    let output = "";
+
+    while (l1 && l2) {
+        output += word1[i] + word2[j];
+        i++, j++;
+        l1--, l2--;
+    }
+
+    while (l1) {
+        output += word1[i];
+        i++;
+        l1--;
+    }
+
+    while (l2) {
+        output += word2[j];
+        j++;
+        l2--;
+    }
+
+    return output;
+};

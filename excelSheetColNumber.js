@@ -46,3 +46,5 @@ let titleToNumber = function(columnTitle) {
     return result;
 
 }
+
+console.log(titleToNumber("ZY"));

@@ -21,3 +21,22 @@
 // For nums1, nums1[2] and nums1[3] are not present in nums2. Since nums1[2] == nums1[3], their value is only included once and answer[0] = [3].
 // Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
 
+// Solution:
+
+var findDifference = function(nums1, nums2) {
+    let subAns1 = [], subAns2 = [];
+
+    for (let i = 0; i < nums1.length; i++) {
+        if (!nums2.includes(nums1[i]) && !subAns1.includes(nums1[i])) {
+            subAns1.push(nums1[i])
+        }
+    }
+    for (let i = 0; i < nums2.length; i++) {
+        if (!nums1.includes(nums2[i]) && !subAns2.includes(nums2[i])) {
+            subAns2.push(nums2[i])
+        }
+    }
+
+    return [subAns1, subAns2];
+};
+

@@ -18,3 +18,17 @@
 // Output: "Me Myself and I"
 // Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I4", then remove the numbers.
 
+// Solution:
+
+var sortSentence = function(s) {
+    let ansArray = [];
+    s = s.split(" ");
+    
+    for (let i = 0; i < s.length; i++) {
+        let ele = s[i];
+        let index = Number(ele.at(-1));
+        ansArray[index-1] = ele.slice(0, -1);
+    }
+
+    return ansArray.join(" ");
+};

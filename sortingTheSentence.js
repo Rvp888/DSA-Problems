@@ -32,3 +32,6 @@ var sortSentence = function(s) {
 
     return ansArray.join(" ");
 };
+
+console.log(sortSentence("is2 sentence4 This1 a3"));
+

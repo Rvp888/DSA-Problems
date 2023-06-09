@@ -23,3 +23,21 @@
 // Step 2) 4 is even; divide by 2 and obtain 2. 
 // Step 3) 2 is even; divide by 2 and obtain 1. 
 // Step 4) 1 is odd; subtract 1 and obtain 0.
+
+// Solution:
+
+var numberOfSteps = function(num) {
+    let steps = 0;
+
+    while (num > 0) {
+        if (num % 2 === 0) {
+            num = num/2;
+        }
+        else {
+            num = num - 1;
+        }
+        steps++;
+    }
+
+    return steps;
+};

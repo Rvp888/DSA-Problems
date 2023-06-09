@@ -36,6 +36,8 @@ var maximum69Number  = function(num) {
             break;
         }
     }
-    
+
     return num.join("");
 };
+
+console.log(maximum69Number(9669));

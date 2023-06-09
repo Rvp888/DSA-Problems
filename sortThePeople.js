@@ -35,3 +35,6 @@ var sortPeople = function(names, heights) {
     return ans;
 };
 
+console.log(sortPeople(['Alice','Bob','Bob'], [155,185,150]));
+
+

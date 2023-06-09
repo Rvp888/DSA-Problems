@@ -16,3 +16,22 @@
 // Input: names = ["Alice","Bob","Bob"], heights = [155,185,150]
 // Output: ["Bob","Alice","Bob"]
 // Explanation: The first Bob is the tallest, followed by Alice and the second Bob.
+
+
+var sortPeople = function(names, heights) {
+    let ans = [];
+    let obj = {};
+
+    for (let i = 0; i < heights.length; i++) {
+        obj[heights[i]] = i;
+    }
+
+    heights = heights.sort((a, b) => b - a);
+
+    for (let i = 0; i < heights.length; i++) {
+        ans[i] = names[obj[heights[i]]];
+    }
+
+    return ans;
+};
+

@@ -47,3 +47,5 @@ var numberOfMatches = function(n) {
     return matches;
 };
 
+console.log(numberOfMatches(14));
+

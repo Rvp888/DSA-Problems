@@ -40,3 +40,4 @@ var findDifference = function(nums1, nums2) {
     return [subAns1, subAns2];
 };
 
+console.log(findDifference([1,2,3], [2,4,6]));

@@ -43,3 +43,4 @@ var selfDividingNumbers = function(left, right) {
     return ans;
 };
 
+console.log(selfDividingNumbers(1, 22));

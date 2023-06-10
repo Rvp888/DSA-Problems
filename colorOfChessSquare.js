@@ -18,3 +18,23 @@
 // Output: true
 // Explanation: From the chessboard above, the square with coordinates "h3" is white, so return true.
 
+// Solution:
+
+var squareIsWhite = function(coordinates) {
+    
+    let letters = " abcdefgh";
+
+    let index1 = letters.indexOf(coordinates[0]);
+    let index2 = coordinates[1];
+
+    if (index1 % 2 !== 0) {
+        if (index2 % 2 === 0) return true;
+        else return false;
+    }
+    else {
+        if (index2 % 2 !== 0) return true;
+        else return false;
+    }
+
+};
+

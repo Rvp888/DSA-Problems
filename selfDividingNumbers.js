@@ -16,3 +16,30 @@
 // Input: left = 47, right = 85
 // Output: [48,55,66,77]
 
+// Solution:
+
+var selfDividingNumbers = function(left, right) {
+    let ans = [];
+
+    for (let i = left; i <= right; i++) {
+        if (i < 10) {
+            ans.push(i);
+        }
+        else {
+            let numStr = i.toString();
+            let isSelfDivide = true;
+            for (let j = 0; j < numStr.length; j++) {
+                let digit = Number(numStr[j]);
+                if (i % digit !== 0) {
+                    isSelfDivide = false;
+                }
+            }
+            if (isSelfDivide) {
+                ans.push(i);
+            }
+        }
+    }
+
+    return ans;
+};
+

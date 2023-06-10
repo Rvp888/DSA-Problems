@@ -15,3 +15,25 @@
 // Output: 2
 // Explanation: The common factors of 25 and 30 are 1, 5.
 
+// Solution:
+
+var commonFactors = function(a, b) {
+    let commonFactors = 0;
+    let smallInt = Math.min(a, b);
+    let bigInt = Math.max(a, b);
+    let factorsOfSmallInt = [];
+
+    for (let i = 1; i <= smallInt; i++) {
+        if (smallInt % i === 0) {
+            factorsOfSmallInt.push(i);
+        }
+    }
+
+    for (let i = 0; i < factorsOfSmallInt.length; i++) {
+        if (bigInt % factorsOfSmallInt[i] === 0) {
+            commonFactors++;
+        }
+    }
+
+    return commonFactors;
+};

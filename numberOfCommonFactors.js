@@ -37,3 +37,5 @@ var commonFactors = function(a, b) {
 
     return commonFactors;
 };
+
+console.log(commonFactors(12, 6));

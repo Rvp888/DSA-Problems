@@ -34,4 +34,7 @@ var isSameAfterReversals = function(num) {
     return num === reversed2;
 };
 
+console.log(isSameAfterReversals(526));
+
+
 

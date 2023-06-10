@@ -39,3 +39,4 @@ var commonFactors = function(a, b) {
 };
 
 console.log(commonFactors(12, 6));
+

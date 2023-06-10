@@ -22,4 +22,16 @@
 // Output: true
 // Explanation: Reverse num to get 0, then reverse 0 to get 0, which equals num.
 
+// Solution:
+
+var isSameAfterReversals = function(num) {
+    num = num.toString();
+    let reversed1 = num.split("").reverse().join("");
+    reversed1 = Number(reversed1);
+    reversed1 = reversed1.toString();
+    let reversed2 = reversed1.split("").reverse().join("");
+
+    return num === reversed2;
+};
+
 

@@ -38,4 +38,4 @@ var squareIsWhite = function(coordinates) {
 
 };
 
-console.log(squareIsWhite("h3"));
+console.log(squareIsWhite("a1"));

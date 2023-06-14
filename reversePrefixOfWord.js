@@ -37,4 +37,5 @@ var reversePrefix = function(word, ch) {
     return result;
 };
 
+console.log(reversePrefix("abcdefd", "d"));
 

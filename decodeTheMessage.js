@@ -25,3 +25,30 @@
 // It is obtained by taking the first appearance of each letter in "eljuxhpwnyrdgtqkviszcfmabo".
 
 
+// Solution:
+
+var decodeMessage = function(key, message) {
+
+    let result = "";
+    let alphabets = "abcdefghijklmnopqrstuvwxyz";
+
+    let modKey = "";
+    for (let i = 0; i < key.length; i++) {
+        if (key[i] !== " " && !modKey.includes(key[i])) {
+            modKey += key[i];
+        }
+    }
+
+    for (let i = 0; i < message.length; i++) {
+        if (message[i] === " ") {
+            result += " ";
+        }
+        else {
+            let index = modKey.indexOf(message[i]);
+            result += alphabets[index];
+        }
+    }
+
+    return result;
+};
+

@@ -44,3 +44,6 @@ var areOccurrencesEqual = function(s) {
 
     return true;
 };
+
+
+console.log(areOccurrencesEqual("abacbc"));

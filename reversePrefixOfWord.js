@@ -19,3 +19,22 @@
 // Output: "zxyxxe"
 // Explanation: The first and only occurrence of "z" is at index 3.
 // Reverse the part of word from 0 to 3 (inclusive), the resulting string is "zxyxxe".
+
+// solution:
+
+var reversePrefix = function(word, ch) {
+    let result = "";
+    let chInd = word.indexOf(ch);
+
+    for (let i = chInd; i >= 0; i--) {
+        result += word[i];
+    }
+
+    for (let i = chInd+1; i < word.length; i++) {
+        result += word[i];
+    }
+
+    return result;
+};
+
+

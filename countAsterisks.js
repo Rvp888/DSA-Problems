@@ -43,3 +43,5 @@ var countAsterisks = function (s) {
 
   return count + tempCount;
 };
+
+console.log(countAsterisks("l|*e*et|c**o|*de|"));

@@ -27,3 +27,25 @@
 // - s[5] -> shift('c',3) = 'f'
 // - s[7] -> shift('d',4) = 'h'
 
+// Solution:
+
+var replaceDigits = function(s) {
+    let result = "";
+
+    function shift (c, x) {
+        let alphabets = "abcdefghijklmnopqrstuvwxyz";
+        let indexOfC = alphabets.indexOf(c);
+        return alphabets[indexOfC + x];
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        if (i % 2 == 0) result += s[i];
+        else {
+            let char = shift(s[i-1], Number(s[i]));
+            result += char;
+        }
+    }
+
+    return result;
+};
+

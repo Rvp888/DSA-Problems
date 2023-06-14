@@ -21,3 +21,26 @@
 // Output: ""
 // Explanation: There are no palindromic strings, so the empty string is returned.
 
+
+// Solution:
+
+var firstPalindrome = function(words) {
+    
+    for (let i = 0; i < words.length; i++) {
+        let str = words[i];
+        let j = 0, k = str.length-1;
+        let isPalindrome = true;
+        while (j < k) {
+            if (str[j] !== str[k]) {
+                isPalindrome = false;
+            }
+            j++, k--;
+        }
+        if (isPalindrome) {
+            return str;
+        }
+    }
+
+    return "";
+};
+

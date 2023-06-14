@@ -43,4 +43,5 @@ var halvesAreAlike = function(s) {
     return vowelsCount1 === vowelsCount2;
 };
 
+console.log(halvesAreAlike("book"));
 

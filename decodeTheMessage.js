@@ -52,3 +52,4 @@ var decodeMessage = function(key, message) {
     return result;
 };
 
+console.log(decodeMessage(key = "the quick brown fox jumps over the lazy dog", message = "vkbs bs t suepuv"))

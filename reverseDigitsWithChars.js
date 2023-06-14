@@ -49,3 +49,5 @@ var replaceDigits = function(s) {
     return result;
 };
 
+console.log(replaceDigits("a1c1e1"));
+

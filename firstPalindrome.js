@@ -44,3 +44,4 @@ var firstPalindrome = function(words) {
     return "";
 };
 
+console.log(firstPalindrome(["abc","car","ada","racecar","cool"]));

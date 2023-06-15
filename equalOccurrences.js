@@ -47,3 +47,4 @@ var areOccurrencesEqual = function(s) {
 
 
 console.log(areOccurrencesEqual("abacbc"));
+

@@ -68,3 +68,4 @@ var minTimeToType = function(word) {
 
 };
 
+console.log(minTimeToType("zjpc")); 

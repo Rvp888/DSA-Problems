@@ -49,3 +49,4 @@ var isSumEqual = function(firstWord, secondWord, targetWord) {
 
 };
 
+console.log(isSumEqual(firstWord = "acb", secondWord = "cba", targetWord = "cdb"));

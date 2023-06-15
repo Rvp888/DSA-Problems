@@ -40,4 +40,4 @@ var minimizedStringLength = function(s) {
     return result.length;
 };
 
-
+console.log(minimizedStringLength("aaabc"));

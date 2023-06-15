@@ -64,3 +64,4 @@ var minDeletionSize = function(strs) {
 };
 
 console.log(minDeletionSize(["cba","daf","ghi"]));
+

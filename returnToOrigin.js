@@ -22,3 +22,26 @@
 // Output: false
 // Explanation: The robot moves left twice. It ends up two "moves" to the left of the origin. 
 // We return false because it is not at the origin at the end of its moves.
+
+// Constraints:
+// 1 <= moves.length <= 2 * 104
+// moves only contains the characters 'U', 'D', 'L' and 'R'.
+
+// leetcode link:- https://leetcode.com/problems/robot-return-to-origin/description/
+
+
+// Solution:
+
+var judgeCircle = function(moves) {
+    
+    let up = 0, down = 0, left = 0, right = 0;
+
+    for (let i = 0; i < moves.length; i++) {
+        if (moves[i] === "U") up++;
+        if (moves[i] === "D") down++;
+        if (moves[i] === "L") left++;
+        if (moves[i] === "R") right++;
+    }
+
+    return up === down && left === right;
+};

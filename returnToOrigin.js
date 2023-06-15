@@ -45,3 +45,5 @@ var judgeCircle = function(moves) {
 
     return up === down && left === right;
 };
+
+console.log(judgeCircle("UD"));

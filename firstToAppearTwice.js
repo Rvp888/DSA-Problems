@@ -22,3 +22,20 @@
 // Output: "d"
 // Explanation:
 // The only letter that appears twice is 'd' so we return 'd'.
+
+// Solution:
+
+var repeatedCharacter = function(s) {
+    
+    let obj = {};
+
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        if (obj[char]) {
+            return char;
+        }
+        obj[char] = 1;
+    }
+
+};
+

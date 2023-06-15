@@ -47,3 +47,4 @@ var digitCount = function(num) {
     return true;
 };
 
+console.log(digitCount("1210"));

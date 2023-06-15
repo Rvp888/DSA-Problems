@@ -24,6 +24,7 @@
 // the left of index 1, but there is one to the right at index 2, so we delete the 'b' at index 2. 
 // The string becomes "cbd" and further operations will leave it unchanged. Hence, the minimized length is 3.
 
+// Leetcode Link: https://leetcode.com/problems/minimize-string-length/
 
 // Solution:
 

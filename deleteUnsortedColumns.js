@@ -41,3 +41,25 @@
 //   tsr
 // All 3 columns are not sorted, so you will delete all 3.
 
+
+// Solution:
+
+var minDeletionSize = function(strs) {
+    
+    let deletions = 0;
+
+    for (let index = 0; index < strs[0].length; index++) {
+
+        for (let i = 0; i < strs.length-1; i++) {
+            
+            if (strs[i][index] > strs[i+1][index]) {
+
+                deletions++;
+                break;
+            }
+        }
+    }
+
+    return deletions;
+};
+

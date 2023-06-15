@@ -41,6 +41,7 @@
 //   tsr
 // All 3 columns are not sorted, so you will delete all 3.
 
+// Leetcode link: https://leetcode.com/problems/delete-columns-to-make-sorted/
 
 // Solution:
 

@@ -23,6 +23,8 @@
 // Explanation:
 // The only letter that appears twice is 'd' so we return 'd'.
 
+// Leetcode link: https://leetcode.com/problems/first-letter-to-appear-twice/
+
 // Solution:
 
 var repeatedCharacter = function(s) {

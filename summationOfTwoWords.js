@@ -22,3 +22,30 @@
 
 // Leetcode link: https://leetcode.com/problems/check-if-word-equals-summation-of-two-words/description/
 
+// Solution:
+
+var isSumEqual = function(firstWord, secondWord, targetWord) {
+    
+    let alphabets = "abcdefghijklmnopqrstuvwxyz";
+
+    let firstNum = "", secondNum = "", targetNum = "";
+
+    for (let i = 0; i < firstWord.length; i++) {
+        firstNum += alphabets.indexOf(firstWord[i]);
+    }
+    firstNum = Number(firstNum);
+
+    for (let i = 0; i < secondWord.length; i++) {
+        secondNum += alphabets.indexOf(secondWord[i]);
+    }
+    secondNum = Number(secondNum);
+
+    for (let i = 0; i < targetWord.length; i++) {
+        targetNum += alphabets.indexOf(targetWord[i]);
+    }
+    targetNum = Number(targetNum);
+
+    return firstNum + secondNum === targetNum;
+
+};
+

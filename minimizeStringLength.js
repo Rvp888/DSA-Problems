@@ -25,3 +25,19 @@
 // The string becomes "cbd" and further operations will leave it unchanged. Hence, the minimized length is 3.
 
 
+// Solution:
+
+var minimizedStringLength = function(s) {
+
+    let result = "";
+
+    for (let i = 0; i < s.length; i++) {
+        if (!result.includes(s[i])) {
+            result += s[i];
+        }
+    }
+
+    return result.length;
+};
+
+

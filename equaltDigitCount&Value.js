@@ -25,3 +25,25 @@
 // num[1] = '3'. The digit 1 should occur three times, but actually occurs zero times in num.
 // num[2] = '0'. The digit 2 occurs zero times in num.
 // The indices 0 and 1 both violate the condition, so return false.
+
+// Leetcode link: https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value/description/
+
+// Solution:
+
+var digitCount = function(num) {
+  
+    let arr = new Array(num.length).fill(0);
+
+    for (let i = 0; i < num.length; i++) {
+        arr[num[i]] += 1;
+    }
+
+    for (let i = 0; i < num.length; i++) {
+        if (Number(num[i]) !== arr[i]) {
+            return false;
+        }
+    }
+
+    return true;
+};
+

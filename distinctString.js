@@ -63,3 +63,5 @@ var kthDistinct = function(arr, k) {
 
 };
 
+console.log(kthDistinct(["d","b","c","b","c","a"]));
+

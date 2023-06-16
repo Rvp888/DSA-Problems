@@ -22,3 +22,22 @@
 // Explanation: There are 7 substrings of size 3: "aab", "aba", "bab", "abc", "bca", "cab", and "abc".
 // The good substrings are "abc", "bca", "cab", and "abc".
 
+// Leetcode link: https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/
+
+// Solution:
+
+var countGoodSubstrings = function(s) {
+    
+    let goodSubStrs = 0;
+
+    for (let i = 0; i < s.length-2; i++) {
+        let subStr = s.substr(i, 3);
+        if (subStr[0] != subStr[1] && subStr[0] != subStr[2] && subStr[1] != subStr[2]) {
+            goodSubStrs++;
+        }
+    }
+
+    return goodSubStrs;
+
+};
+

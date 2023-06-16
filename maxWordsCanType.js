@@ -48,3 +48,5 @@ var canBeTypedWords = function(text, brokenLetters) {
     return size;
 
 };
+
+console.log(canBeTypedWords(text = "hello world", brokenLetters = "ad"));

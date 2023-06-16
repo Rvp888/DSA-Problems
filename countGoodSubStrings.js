@@ -41,3 +41,4 @@ var countGoodSubstrings = function(s) {
 
 };
 
+console.log(countGoodSubstrings(s = "aababcabc"));

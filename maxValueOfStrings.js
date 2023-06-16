@@ -26,4 +26,30 @@
 // Explanation: 
 // Each string in the array has value 1. Hence, we return 1.
 
+// Leetcode link: https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/description/
+
+// Solution:
+
+var maximumValue = function(strs) {
+    
+    let maxValue = 0;
+
+    for (let i = 0; i < strs.length; i++) {
+        let str = strs[i];
+        let value;
+        if (isNaN(Number(str))) {
+            value = str.length;
+        }
+        else {
+            value = Number(str);
+        }
+
+        if (value > maxValue) {
+           maxValue = value; 
+        }
+    }
+
+    return maxValue;
+
+};
 

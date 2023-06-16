@@ -24,3 +24,21 @@
 // Explanation:
 // Both of the strings are a prefix of s. 
 // Note that the same string can occur multiple times in words, and it should be counted each time.
+
+// Leetcode link: https://leetcode.com/problems/count-prefixes-of-a-given-string/
+
+// Solution:
+
+var countPrefixes = function(words, s) {
+    
+    let count = 0;
+
+    for (let i = 0; i < words.length; i++) {
+        if (s.startsWith(words[i])) {
+            count++;
+        }
+    }
+
+    return count;
+};
+

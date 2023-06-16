@@ -53,3 +53,6 @@ var maximumValue = function(strs) {
 
 };
 
+console.log(maximumValue(strs = ["alic3","bob","3","4","00000"]));
+
+

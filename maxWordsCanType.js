@@ -25,3 +25,26 @@
 // Output: 0
 // Explanation: We cannot type either word because the 'e' key is broken.
 
+// Leetcode link: https://leetcode.com/problems/maximum-number-of-words-you-can-type/description/
+
+// Solution:
+
+var canBeTypedWords = function(text, brokenLetters) {
+
+    let textArr = text.split(" ");
+    let size = textArr.length;
+
+    for (let i = 0; i < textArr.length; i++) {
+        let word = textArr[i];
+        for (let j = 0; j < brokenLetters.length; j++) {
+            let brokLetter = brokenLetters[j];
+            if (word.includes(brokLetter)) {
+                size--;
+                break;
+            }
+        }
+    }
+
+    return size;
+
+};

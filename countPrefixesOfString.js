@@ -42,3 +42,5 @@ var countPrefixes = function(words, s) {
     return count;
 };
 
+console.log(countPrefixes(words = ["a","b","c","ab","bc","abc"], s = "abc"));
+

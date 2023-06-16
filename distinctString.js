@@ -31,4 +31,35 @@
 // Explanation:
 // The only distinct string is "b". Since there are fewer than 3 distinct strings, we return an empty string "".
 
+// Leetcode link: https://leetcode.com/problems/kth-distinct-string-in-an-array/description/
+
+
+// Solution:
+
+var kthDistinct = function(arr, k) {
+    
+    let obj = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        if (obj[arr[i]]) {
+            obj[arr[i]]++;
+        }
+        else {
+            obj[arr[i]] = 1;
+        }
+    }
+
+    let coln = [""];
+    for (let key in obj) {
+        if (obj[key] === 1) {
+            coln.push(key);
+        }
+    }
+
+    if (coln[k]) {
+        return coln[k];
+    }
+    return coln[0];
+
+};
 

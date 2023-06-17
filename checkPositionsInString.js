@@ -42,3 +42,4 @@ var checkString = function(s) {
 };
 
 console.log(checkString(s = "abab"));
+

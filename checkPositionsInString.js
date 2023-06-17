@@ -27,3 +27,17 @@
 // Explanation:
 // There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 
+// Leetcode link: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/description/
+
+// Solution:
+
+var checkString = function(s) {
+
+    if (!s.includes('b')) return true;
+    
+    let firstIndexOfB = s.indexOf('b'), lastIndexOfA = s.lastIndexOf('a');
+
+    return lastIndexOfA < firstIndexOfB;
+    
+};
+

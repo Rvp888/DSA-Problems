@@ -51,3 +51,4 @@ var createTargetArray = function(nums, index) {
     
 };
 
+console.log(createTargetArray(nums = [0,1,2,3,4], index = [0,1,2,2,1]));

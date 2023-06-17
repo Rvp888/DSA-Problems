@@ -75,3 +75,4 @@ var findWords = function(words) {
 
 };
 
+console.log(findWords(words = ["Hello","Alaska","Dad","Peace"]));

@@ -54,3 +54,5 @@ var shortestToChar = function(s, c) {
 };
 
 console.log(shortestToChar(s = "loveleetcode", c = "e"));
+
+

@@ -67,3 +67,6 @@ var similarPairs = function(words) {
 
 };
 
+console.log(similarPairs(words = ["aba","aabb","abcd","bac","aabc"]));
+
+

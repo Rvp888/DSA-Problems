@@ -21,3 +21,34 @@
 // Input: s = "aaab", c = "b"
 // Output: [3,2,1,0]
 
+// Constraints:
+// * 1 <= s.length <= 104
+// * s[i] and c are lowercase English letters.
+// * It is guaranteed that c occurs at least once in s.
+
+// Leetcode link: https://leetcode.com/problems/shortest-distance-to-a-character/description/
+
+// Solution:
+
+var shortestToChar = function(s, c) {
+    
+    let answer = [];
+
+    outerLoop: for (let i = 0; i < s.length; i++) {
+
+        let j = i, k = i;
+        while (true) {
+            if (s[j] === c) {
+                answer[i] = Math.abs(i-j);
+                continue outerLoop;
+            }
+            if (s[k] === c) {
+                answer[i] = Math.abs(i-k);
+                continue outerLoop;
+            }
+            j--, k++;
+        }
+    }
+
+    return answer;
+};

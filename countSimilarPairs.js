@@ -32,5 +32,38 @@
 // Output: 0
 // Explanation: Since there does not exist any pair that satisfies the conditions, we return 0.
 
+// Leetcode link: https://leetcode.com/problems/count-pairs-of-similar-strings/description/
 
+// Solution:
+
+var similarPairs = function(words) {
+    
+    let pairs = 0;
+    let arr = [];
+
+    for (let i = 0; i < words.length; i++) {
+        let str = words[i];
+        let newStr = [];
+        for (let j = 0; j < str.length; j++) {
+            if (!newStr.includes(str[j])) {
+                newStr.push(str[j]);
+            }
+        }
+        newStr = newStr.sort().join("");
+        arr.push(newStr);
+    }
+
+    for (let i = 0; i < arr.length-1; i++) {
+        let str1 = arr[i];
+        for (let j = i+1; j < arr.length; j++) {
+            let str2 = arr[j];
+            if (str1 === str2) {
+                pairs++;
+            }
+        }
+    }
+
+    return pairs;
+
+};
 

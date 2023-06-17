@@ -59,3 +59,6 @@ var checkDistances = function(s, distance) {
     return true;
 
 };
+
+console.log(checkDistances(s = "abaccb", distance = [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]));
+

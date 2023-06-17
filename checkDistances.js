@@ -29,3 +29,33 @@
 // - 'a' appears at indices 0 and 1 so there are zero letters between them.
 // Because distance[0] = 1, s is not a well-spaced string.
 
+// Leetcode link: https://leetcode.com/problems/check-distances-between-same-letters/description/
+
+var checkDistances = function(s, distance) {
+
+    let alphabets = { 'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7,
+                      'i': 8, 'j': 9, 'k': 10, 'l': 11, 'm': 12, 'n': 13, 'o': 14,
+                      'p': 15, 'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20, 'v': 21,
+                      'w': 22, 'x': 23, 'y': 24, 'z': 25 };
+
+    let obj = {};
+
+    for (let i = 0; i < s.length; i++) {
+        if (obj[s[i]] !== undefined) {
+            obj[s[i]] = i - obj[s[i]] - 1;
+        }
+        else {
+            obj[s[i]] = i;
+        }
+    }
+
+    for (let key in obj) {
+        let arrIndex = alphabets[key];
+        if (obj[key] !== distance[arrIndex]) {
+            return false;
+        }
+    }
+
+    return true;
+
+};

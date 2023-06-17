@@ -35,4 +35,19 @@
 // 4            3        [1,2,3,4]
 // 0            0        [0,1,2,3,4]
 
+// Leetcode link: https://leetcode.com/problems/create-target-array-in-the-given-order/description/
+
+// Solution:
+
+var createTargetArray = function(nums, index) {
+    
+    let target = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        target.splice(index[i], 0, nums[i]);
+    }
+
+    return target;
+    
+};
 

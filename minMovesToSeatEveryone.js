@@ -61,3 +61,6 @@ var minMovesToSeat = function(seats, students) {
     return result;
 
 };
+
+console.log(minMovesToSeat(seats = [2,2,6,6], students = [1,3,2,6]));
+

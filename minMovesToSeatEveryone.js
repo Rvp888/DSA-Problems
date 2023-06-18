@@ -44,3 +44,20 @@
 // - The fourth student is not moved.
 // In total, 1 + 3 + 0 + 0 = 4 moves were used.
 
+//Leetcode link: https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/description/
+
+// Solution:
+
+var minMovesToSeat = function(seats, students) {
+    
+    let result = 0;
+    seats.sort((a,b) => a-b);
+    students.sort((a,b) => a-b);
+
+    for (let i = 0; i < seats.length; i++) {
+        result += Math.abs(seats[i] - students[i]);
+    }
+
+    return result;
+
+};

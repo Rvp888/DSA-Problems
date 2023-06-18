@@ -35,3 +35,10 @@
 // "+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
 // The total sum is 5 + 10 + 15 = 30.
 
+// Constraints:
+
+// * 1 <= operations.length <= 1000
+// * operations[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
+// * For operation "+", there will always be at least two previous scores on the record.
+// * For operations "C" and "D", there will always be at least one previous score on the record.
+

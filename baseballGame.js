@@ -75,3 +75,5 @@ var calPoints = function(operations) {
 
     return sum;
 };
+
+console.log(calPoints(ops = ["5","2","C","D","+"]));

@@ -31,3 +31,24 @@
 
 // Leetcode link: https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case/description/
 
+// Solution:
+
+var greatestLetter = function(s) {
+    
+    let result = [];
+
+    for (let i = 0; i < s.length; i++) {
+        if (s.includes(s[i].toLowerCase()) && s.includes(s[i].toUpperCase())) {
+            result.push(s[i].toUpperCase());
+        }
+    }
+
+    if (result.length) {
+        result.sort();
+        return result[result.length-1];
+    }
+
+    return "";
+
+};
+

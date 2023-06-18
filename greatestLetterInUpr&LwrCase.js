@@ -52,3 +52,4 @@ var greatestLetter = function(s) {
 
 };
 
+console.log(greatestLetter(s = "arRAzFif"));

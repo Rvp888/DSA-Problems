@@ -20,4 +20,27 @@
 // Output: 0
 // Explanation: Since no value in nums is repeated, there are no pairs (i,j) that meet all the requirements.
 
+// Leetcode link: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/description/
+
+
+// Solution:
+
+var countPairs = function(nums, k) {
+    
+    let pairs = 0;
+
+    for (let i = 0; i < nums.length - 1; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] === nums[j]) {
+                if ((i * j) % k === 0) {
+                    pairs++;
+                }
+            }
+        }
+    }
+
+    return pairs;
+
+};
+
 

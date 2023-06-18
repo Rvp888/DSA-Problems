@@ -35,3 +35,6 @@ var maxProduct = function(nums) {
     return result;
 
 };
+
+console.log(maxProduct(nums = [3,4,5,2]));
+

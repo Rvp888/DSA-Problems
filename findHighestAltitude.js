@@ -18,3 +18,22 @@
 // Input: gain = [-4,-3,-2,-1,4,3,2]
 // Output: 0
 // Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
+
+// Leetcode link: https://leetcode.com/problems/find-the-highest-altitude/description/
+
+var largestAltitude = function(gain) {
+    
+    let highest = 0;
+    let startPoint = 0;
+
+    for (let i = 0; i < gain.length; i++) {
+        let newPoint = (startPoint + gain[i]);
+        if (newPoint > highest) {
+            highest = newPoint;
+        }
+        startPoint = newPoint;
+    }
+
+    return highest;
+
+};

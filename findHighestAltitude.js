@@ -37,3 +37,5 @@ var largestAltitude = function(gain) {
     return highest;
 
 };
+
+console.log(largestAltitude(gain = [-5,1,5,0,-7]));

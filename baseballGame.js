@@ -42,3 +42,36 @@
 // * For operation "+", there will always be at least two previous scores on the record.
 // * For operations "C" and "D", there will always be at least one previous score on the record.
 
+// Leetcode link: https://leetcode.com/problems/baseball-game/description/
+
+// Solution:
+
+var calPoints = function(operations) {
+    
+    let sum = 0;
+    let scores = [];
+
+    for (let i = 0; i < operations.length; i++) {
+        if (operations[i] === "C") {
+            scores.pop();
+        }
+        else if (operations[i] === "D") {
+            scores.push(scores[scores.length-1] * 2);
+        }
+        else if (operations[i] === "+") {
+            scores.push(scores[scores.length-1] + scores[scores.length-2]);
+        }
+        else {
+            scores.push(Number(operations[i]));
+        }
+    }
+
+    // for (let i = 0; i < scores.length; i++) {
+    //     sum += scores[i];
+    // }
+
+    // return sum;
+    sum = scores.reduce((a,b) => a+b, 0)
+
+    return sum;
+};

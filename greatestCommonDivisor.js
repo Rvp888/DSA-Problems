@@ -43,3 +43,4 @@ var findGCD = function(nums) {
 
 };
 
+console.log(findGCD(nums = [2,5,6,9,10]));

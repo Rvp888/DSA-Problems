@@ -32,3 +32,5 @@ var findNumbers = function(nums) {
     return count;
 
 };
+
+console.log(findNumbers(nums = [12,345,2,6,7896]));

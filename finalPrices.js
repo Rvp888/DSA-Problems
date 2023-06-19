@@ -19,4 +19,28 @@
 // For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.
 // For items 3 and 4 you will not receive any discount at all.
 
+// Leetcode link: https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/
+
+// Solution:
+
+var finalPrices = function(prices) {
+    
+    let answer = [];
+
+    for (let i = 0; i < prices.length; i++) {
+        for (let j = i+1; j < prices.length; j++) {
+            if (prices[i] >= prices[j]) {
+                answer.push(prices[i] - prices[j]);
+                break;
+            }
+        }
+        if (answer.length === i) {
+            answer.push(prices[i]);
+        }
+    }
+
+    return answer;
+
+};
+
 

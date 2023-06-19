@@ -74,3 +74,6 @@ var sumOfUnique = function(nums) {
 
 };
 
+console.log(sumOfUnique(nums = [1,2,3,2]));
+
+

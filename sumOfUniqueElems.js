@@ -22,3 +22,28 @@
 // Input: nums = [1,2,3,4,5]
 // Output: 15
 // Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
+
+// Leetcode link: https://leetcode.com/problems/sum-of-unique-elements/description/
+
+// Solution-1:
+
+// var sumOfUnique = function(nums) {
+    
+//     let sum = 0;
+//     let obj = {};
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (obj[nums[i]] === undefined) {
+//             obj[nums[i]] = 1;
+//             sum += nums[i];
+//         }
+//         else if (obj[nums[i]] === 1) {
+//             sum -= nums[i];
+//             obj[nums[i]]++;
+//         }
+//     }
+
+//     return sum;
+
+// };
+

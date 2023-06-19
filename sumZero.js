@@ -44,3 +44,4 @@ var sumZero = function(n) {
 
 };
 
+console.log(sumZero(n = 5));

@@ -14,3 +14,21 @@
 // 7896 contains 4 digits (even number of digits). 
 // Therefore only 12 and 7896 contain an even number of digits.
 
+// Leetcode link: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
+
+// Solution:
+
+var findNumbers = function(nums) {
+    
+    let count = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        let num = nums[i].toString();
+        if (num.length % 2 === 0) {
+            count++;
+        }
+    }
+
+    return count;
+
+};

@@ -18,3 +18,29 @@
 // Input: n = 1
 // Output: [0]
 
+// Leetcode link: https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/description/
+
+// Solution:
+
+var sumZero = function(n) {
+    
+    let result = [];
+
+    if (n % 2 === 0) {
+        let nums = n / 2;
+        for (let i = 1; i <= nums; i++) {
+            result.push(i, -i);
+        }
+    }
+    else {
+        let nums = (n - 1) / 2;
+        result.push(0);
+        for (let i = 1; i <= nums; i++) {
+            result.push(i, -i);
+        }
+    }
+
+    return result;
+
+};
+

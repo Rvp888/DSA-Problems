@@ -43,4 +43,5 @@ var finalPrices = function(prices) {
 
 };
 
+console.log(finalPrices(prices = [8,4,6,2,3]));
 

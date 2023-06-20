@@ -10,5 +10,17 @@
 
 // Return the number of indices where heights[i] != expected[i].
 
+// Example 1:
+
+// Input: heights = [1,1,4,2,1,3]
+// Output: 3
+// Explanation: 
+// heights:  [1,1,4,2,1,3]
+// expected: [1,1,1,2,3,4]
+// Indices 2, 4, and 5 do not match.
+
+// Leetcode link: https://leetcode.com/problems/height-checker/description/
+
+
 
 

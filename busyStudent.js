@@ -44,3 +44,4 @@ var busyStudent = function(startTime, endTime, queryTime) {
 
 };
 
+console.log(busyStudent(startTime = [1,2,3], endTime = [3,2,7], queryTime = 4));

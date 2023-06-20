@@ -22,3 +22,26 @@
 // The item with value = 4 occurs in items1 with weight = 5, total weight = 5.  
 // Therefore, we return [[1,6],[3,9],[4,5]].
 
+
+// Leetcode link: https://leetcode.com/problems/merge-similar-items/description/
+
+// Solution:
+
+var mergeSimilarItems = function(items1, items2) {
+    
+    let collection = {};
+
+    let items = [...items1, ...items2];
+
+    for (let [val, wgt] of items) {
+        if (collection[val]) {
+            collection[val] += wgt;
+        }
+        else {
+            collection[val] = wgt;
+        }
+    }
+
+    return Object.entries(collection);
+
+};

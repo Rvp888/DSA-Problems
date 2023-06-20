@@ -54,3 +54,6 @@ var rowAndMaximumOnes = function(mat) {
 
 };
 
+console.log(rowAndMaximumOnes(mat = [[0,1],[1,0]]));
+
+

@@ -45,3 +45,5 @@ var numberOfPairs = function(nums) {
     return [pairs, temp.length];
 
 };
+
+console.log(numberOfPairs(nums = [1,3,2,1,3,2,2]));

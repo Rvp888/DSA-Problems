@@ -43,4 +43,5 @@ var repeatedNTimes = function(nums) {
 
 };
 
+console.log(repeatedNTimes(nums = [1,2,3,3]));
 

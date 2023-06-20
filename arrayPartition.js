@@ -20,3 +20,21 @@
 // Output: 9
 // Explanation: The optimal pairing is (2, 1), (2, 5), (6, 6). min(2, 1) + min(2, 5) + min(6, 6) = 1 + 2 + 6 = 9.
 
+// Leetcode link: https://leetcode.com/problems/array-partition/description/
+
+// Solution:
+
+var arrayPairSum = function(nums) {
+    
+    let result = 0;
+
+    nums.sort((a, b) => a - b);
+
+    for (let i = 0; i < nums.length; i += 2) {
+        result += nums[i];
+    }
+
+    return result;
+
+};
+

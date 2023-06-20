@@ -18,4 +18,29 @@
 // Input: nums = [2,1,2,5,3,2]
 // Output: 2
 
+// Leetcode link: https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/
+
+// Solution:
+
+var repeatedNTimes = function(nums) {
+    
+    let obj = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        if (obj[nums[i]]) {
+            obj[nums[i]]++;
+        }
+        else {
+            obj[nums[i]] = 1;
+        }
+    }
+
+    for (let key in obj) {
+        if (obj[key] === nums.length/2) {
+            return key;
+        }
+    }
+
+};
+
 

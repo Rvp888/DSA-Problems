@@ -22,3 +22,26 @@
 // No more pairs can be formed. A total of 3 pairs have been formed, and there is 1 number leftover in nums.
 
 
+// Leetcode link: https://leetcode.com/problems/maximum-number-of-pairs-in-array/description/
+
+// Solution:
+
+var numberOfPairs = function(nums) {
+    
+    let pairs = 0;
+    let temp = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (temp.includes(nums[i])) {
+            pairs++;
+            let index = temp.indexOf(nums[i]);
+            temp.splice(index, 1);
+        }
+        else {
+            temp.push(nums[i]);
+        }
+    }
+
+    return [pairs, temp.length];
+
+};

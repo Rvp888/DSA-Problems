@@ -40,4 +40,4 @@ var heightChecker = function(heights) {
 
 };
 
-
+console.log(heightChecker(heights = [1,1,4,2,1,3]));

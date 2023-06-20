@@ -54,3 +54,4 @@ var distinctDifferenceArray = function(nums) {
 
 };
 
+console.log(distinctDifferenceArray(nums = [1,2,3,4,5]));

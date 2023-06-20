@@ -38,3 +38,4 @@ var arrayPairSum = function(nums) {
 
 };
 
+console.log(arrayPairSum(nums = [6,2,6,5,1,2]));

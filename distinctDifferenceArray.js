@@ -21,3 +21,36 @@
 // For index i = 3, there are 4 distinct elements in the prefix and 1 distinct element in the suffix. Thus, diff[3] = 4 - 1 = 3.
 // For index i = 4, there are 5 distinct elements in the prefix and no elements in the suffix. Thus, diff[4] = 5 - 0 = 5.
 
+// Leetcode link: https://leetcode.com/problems/find-the-distinct-difference-array/description/
+
+// Solution:
+
+var distinctDifferenceArray = function(nums) {
+    
+    let diff = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        let prefix = nums.slice(0, i+1);
+        let suffix = nums.slice(i+1, nums.length);
+        let distinctPrefixes = [];
+        let distinctSuffixes = [];
+
+        for (let j = 0; j < prefix.length; j++) {
+            if (!distinctPrefixes.includes(prefix[j])) {
+                distinctPrefixes.push(prefix[j]);
+            }
+        }
+
+        for (let k = 0; k < suffix.length; k++) {
+            if (!distinctSuffixes.includes(suffix[k])) {
+                distinctSuffixes.push(suffix[k]);
+            }
+        }
+
+        diff.push(distinctPrefixes.length - distinctSuffixes.length);
+    }
+
+    return diff;
+
+};
+

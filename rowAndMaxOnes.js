@@ -27,3 +27,30 @@
 // Output: [1,2]
 // Explanation: The row indexed 1 has the maximum count of ones (2). So the answer is [1,2].
 
+// Leetcode link: https://leetcode.com/problems/row-with-maximum-ones/description/
+
+// Solution:
+
+var rowAndMaximumOnes = function(mat) {
+
+    let result = [0, 0];
+    let maxCountOf1 = 0;
+    
+    for (let i = 0; i < mat.length; i++) {
+        let row = mat[i];
+        let countsOf1 = 0;
+        for (let j = 0; j < row.length; j++) {
+            if (row[j] === 1) {
+                countsOf1++;
+            }
+        }
+        if (countsOf1 > maxCountOf1) {
+            maxCountOf1 = countsOf1;
+            result = [i, maxCountOf1];
+        }
+    }
+
+    return result;
+
+};
+

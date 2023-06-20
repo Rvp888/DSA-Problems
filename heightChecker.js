@@ -22,5 +22,22 @@
 // Leetcode link: https://leetcode.com/problems/height-checker/description/
 
 
+// Solution:
+
+var heightChecker = function(heights) {
+    
+    let result = 0;
+    let expected = [...heights];
+    expected.sort((a, b) => a - b);
+
+    for (let i = 0; i < heights.length; i++) {
+        if (heights[i] != expected[i]) {
+            result++;
+        }
+    }
+
+    return result;
+
+};
 
 

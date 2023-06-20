@@ -23,3 +23,24 @@
 // Output: 1
 // Explanation: The only student was doing their homework at the queryTime.
 
+// Leetcode link: https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/description/
+
+// Solution:
+
+var busyStudent = function(startTime, endTime, queryTime) {
+    
+    let result = 0;
+
+    for (let i = 0; i < startTime.length; i++) {
+        if (startTime[i] === queryTime || endTime[i] === queryTime) {
+            result++;
+        }
+        else if (startTime[i] < queryTime && endTime[i] > queryTime) {
+            result++;
+        }       
+    }
+
+    return result;
+
+};
+

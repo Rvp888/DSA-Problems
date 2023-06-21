@@ -24,4 +24,31 @@
 // Explanation: 
 // There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy every condition.
 
+// Leetcode link: https://leetcode.com/problems/divide-array-into-equal-pairs/description/
+
+
+// Solution:
+
+var divideArray = function(nums) {
+    
+    let obj = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        if (obj[nums[i]]) {
+            obj[nums[i]]++;
+        }
+        else {
+            obj[nums[i]] = 1;
+        }
+    }
+
+    for (let key in obj) {
+        if (obj[key] % 2 !== 0) {
+            return false;
+        }
+    }
+
+    return true;
+
+};
 

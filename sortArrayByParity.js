@@ -15,3 +15,23 @@
 // Input: nums = [0]
 // Output: [0]
 
+// Leetcode link: https://leetcode.com/problems/sort-array-by-parity/description/
+
+// Solution:
+
+var sortArrayByParity = function(nums) {
+
+    let result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 0) {
+            result.unshift(nums[i]);
+        }
+        else {
+            result.push(nums[i]);
+        }
+    }
+
+    return result;
+
+};

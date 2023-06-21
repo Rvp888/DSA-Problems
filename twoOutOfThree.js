@@ -20,4 +20,30 @@
 // - 3, in nums1 and nums2.
 // - 1, in nums1 and nums3.
 
+// Leetcode link: https://leetcode.com/problems/two-out-of-three/description/
+
+// Solution:
+
+var twoOutOfThree = function(nums1, nums2, nums3) {
+    
+    let result = [];
+
+    for (let i = 0; i < nums1.length; i++) {
+        let int = nums1[i];
+        if ((nums2.includes(int) || nums3.includes(int)) && !result.includes(int)) {
+            result.push(int);
+        }
+    }
+
+    for (let i = 0; i < nums2.length; i++) {
+        let int = nums2[i];
+        if ((nums1.includes(int) || nums3.includes(int)) && !result.includes(int)) {
+            result.push(int);
+        }
+    }
+
+    return result;
+
+};
+
 

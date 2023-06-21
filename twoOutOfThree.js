@@ -46,4 +46,5 @@ var twoOutOfThree = function(nums1, nums2, nums3) {
 
 };
 
+console.log(twoOutOfThree(nums1 = [3,1], nums2 = [2,3], nums3 = [1,2]));
 

@@ -48,4 +48,5 @@ var findNonMinOrMax = function(nums) {
 
 };
 
+console.log(findNonMinOrMax(nums = [3,2,1,4]));
 

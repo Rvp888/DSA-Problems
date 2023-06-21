@@ -35,3 +35,7 @@ var sortArrayByParity = function(nums) {
     return result;
 
 };
+
+console.log(sortArrayByParity(nums = [3,1,2,4]));
+
+

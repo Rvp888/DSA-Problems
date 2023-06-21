@@ -21,3 +21,31 @@
 // minimum, we cannot select a number that satisfies the given condition. Therefore, 
 // there is no answer.
 
+// Leetcode link: https://leetcode.com/problems/neither-minimum-nor-maximum/description/
+
+// Solution-1:
+// var findNonMinOrMax = function(nums) {
+    
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] !== Math.min(...nums) && nums[i] !== Math.max(...nums)) {
+//             return nums[i];
+//         }
+//     }
+
+//     return -1;
+
+// };
+
+
+// Solution-2:
+var findNonMinOrMax = function(nums) {
+    
+    if (nums.length <= 2) return -1;
+
+    nums.sort((a, b) => a - b);
+
+    return nums[1];
+
+};
+
+

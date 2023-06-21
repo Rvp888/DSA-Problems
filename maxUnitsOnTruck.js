@@ -54,3 +54,6 @@ var maximumUnits = function(boxTypes, truckSize) {
 
 };
 
+console.log(maximumUnits(boxTypes = [[5,10],[2,5],[4,7],[3,9]], truckSize = 10));
+
+

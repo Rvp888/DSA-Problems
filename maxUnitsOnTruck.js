@@ -27,3 +27,30 @@
 // Input: boxTypes = [[5,10],[2,5],[4,7],[3,9]], truckSize = 10
 // Output: 91
 
+// Leetcode link: https://leetcode.com/problems/maximum-units-on-a-truck/description/
+
+// Solution:
+
+var maximumUnits = function(boxTypes, truckSize) {
+    
+    let maxUnits = 0;
+
+    boxTypes.sort((a, b) => {
+        return b[1] - a[1];
+    });
+
+    for (let i = 0; i < boxTypes.length; i++) {
+        let boxType = boxTypes[i];
+        if (truckSize < boxType[0]) {
+            return maxUnits += (truckSize * boxType[1]);
+        }
+        else {
+            maxUnits += (boxType[0] * boxType[1]);
+            truckSize -= boxType[0];
+        }
+    }
+
+    return maxUnits;
+
+};
+

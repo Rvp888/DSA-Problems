@@ -72,5 +72,6 @@ var uniqueOccurrences = function(arr) {
  
  };
 
- 
+console.log(uniqueOccurrences(arr = [1,2,2,1,1,3]));
+
 

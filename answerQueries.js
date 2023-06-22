@@ -23,4 +23,28 @@
 // Output: [0]
 // Explanation: The empty subsequence is the only subsequence that has a sum less than or equal to 1, so answer[0] = 0.
 
+// Leetcode link: https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/
+
+// Solution:
+
+var answerQueries = function(nums, queries) {
+    
+    let answer = [];
+    nums.sort((a, b) => b - a);
+
+    for (let i = 0; i < queries.length; i++) {
+        let size = nums.length;
+        let sum = nums.reduce((a, b) => a + b);
+        let j = 0;
+        while (sum > queries[i]) {
+            sum -= nums[j];
+            j++;
+            size--;
+        }
+        answer.push(size);
+    }
+
+    return answer;
+
+};
 

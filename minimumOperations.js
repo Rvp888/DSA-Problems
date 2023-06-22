@@ -22,3 +22,31 @@
 // Output: 0
 // Explanation: Each element in nums is already 0 so no operations are needed.
 
+
+// Leetcode link: https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/description/
+
+
+// Solution:
+
+var minimumOperations = function(nums) {
+    
+    let operations = 0;
+
+    while (Math.max(...nums) > 0) {
+        let min = Math.max(...nums);
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] != 0 && nums[i] < min) {
+                min = nums[i];
+            }
+        }
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[i] = nums[i] - min;
+            }
+        }
+        operations++;
+    }
+
+    return operations;
+
+};

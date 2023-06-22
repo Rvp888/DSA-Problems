@@ -47,3 +47,5 @@ var minSubsequence = function(nums) {
     return result;
  
 };
+
+console.log(minSubsequence(nums = [4,3,10,9,8]));

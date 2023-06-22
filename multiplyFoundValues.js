@@ -43,3 +43,4 @@ var findFinalValue = function(nums, original) {
 
 };
 
+console.log(findFinalValue(nums = [5,3,6,1,12], original = 3));

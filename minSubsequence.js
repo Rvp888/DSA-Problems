@@ -26,3 +26,24 @@
 // greater than the sum of elements not included (14 = 4 + 4 + 6). Therefore, the subsequence [7,6,7] 
 // is the minimal satisfying the conditions. Note the subsequence has to be returned in non-decreasing order. 
 
+// Leetcode link: https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/description/
+
+// Solution:
+
+var minSubsequence = function(nums) {
+
+    let result = [];
+    nums.sort((a, b) => a - b);
+    let sum = nums.reduce((a, b) => a + b);
+    let subSum = 0;
+
+    while (sum >= subSum) {
+        let ele = nums.pop();
+        result.push(ele);
+        subSum += ele;
+        sum -= ele;   
+    }
+
+    return result;
+ 
+};

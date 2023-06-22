@@ -29,3 +29,17 @@
 // Explanation:
 // - 4 is not found in nums. Thus, 4 is returned.
 
+// Leetcode link: https://leetcode.com/problems/keep-multiplying-found-values-by-two/description/
+
+// Solution: 
+
+var findFinalValue = function(nums, original) {
+    
+    while (nums.includes(original)) {
+        original *= 2;
+    }
+
+    return original;
+
+};
+

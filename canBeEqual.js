@@ -34,3 +34,5 @@ var canBeEqual = function(target, arr) {
     return true;
 
 };
+
+console.log(canBeEqual(target = [1,2,3,4], arr = [2,4,1,3]));

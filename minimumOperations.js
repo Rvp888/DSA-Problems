@@ -50,3 +50,6 @@ var minimumOperations = function(nums) {
     return operations;
 
 };
+
+console.log(minimumOperations(nums = [1,5,0,3,5]));
+

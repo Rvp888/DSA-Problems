@@ -49,3 +49,4 @@ var smallestEqual = function(nums) {
 };
 
 console.log(smallestEqual(nums = [4,3,2,1]));
+

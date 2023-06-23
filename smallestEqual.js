@@ -47,3 +47,5 @@ var smallestEqual = function(nums) {
     return -1;
 
 };
+
+console.log(smallestEqual(nums = [4,3,2,1]));

@@ -32,3 +32,38 @@
 
 // Leetcode link: https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/description/
 
+// Solution-1:
+
+// var kWeakestRows = function(mat, k) {
+    
+//     let result = [];
+//     let obj = {};
+
+//     for (let i = 0; i < mat.length; i++) {
+//         let subMat = mat[i];
+//         let onesCount = 0;
+//         for (let j = 0; j < subMat.length; j++) {
+//             if (subMat[j] === 1) {
+//                onesCount++; 
+//             }
+//         }
+//         obj[i] = onesCount;
+//     }
+
+//     let keys = Object.keys(obj);
+//     let values = Object.values(obj);
+//     values.sort((a, b) => a - b);
+
+//     outerloop: for (let i = 0; i < k; i++) {
+//         let val = values[i];
+//         for (let j = 0; j < keys.length; j++) {
+//             if (obj[j] === val && !result.includes(j)) {
+//                 result.push(j);
+//                 continue outerloop;
+//             }
+//         }
+//     }
+
+//     return result;
+
+// };

@@ -103,3 +103,11 @@ var kWeakestRows = function(mat, k) {
     return result;
 
 };
+
+console.log(kWeakestRows(mat = 
+    [[1,1,0,0,0],
+     [1,1,1,1,0],
+     [1,0,0,0,0],
+     [1,1,0,0,0],
+     [1,1,1,1,1]], 
+    k = 3))

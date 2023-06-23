@@ -67,3 +67,39 @@
 //     return result;
 
 // };
+
+
+
+// Solution-2:
+var kWeakestRows = function(mat, k) {
+    
+    let result = [];
+    let arr = [];
+
+    for (let i = 0; i < mat.length; i++) {
+        let subMat = mat[i];
+        let onesCount = 0;
+        for (let j = 0; j < subMat.length; j++) {
+            if (subMat[j] === 1) {
+               onesCount++; 
+            }
+        }
+        arr.push(onesCount);
+    }
+
+    let newArr = [...arr];
+    newArr.sort((a, b) => a - b);
+
+    for (let i = 0;i < k; i++) {
+        let val = newArr[i];
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] === val && !result.includes(j)) {
+                result.push(j);
+                break;
+            }
+        }
+    }
+
+    return result;
+
+};

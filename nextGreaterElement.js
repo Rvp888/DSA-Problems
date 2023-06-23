@@ -30,3 +30,28 @@
 // - 2 is underlined in nums2 = [1,2,3,4]. The next greater element is 3.
 // - 4 is underlined in nums2 = [1,2,3,4]. There is no next greater element, so the answer is -1.
 
+// Leetcode link: https://leetcode.com/problems/next-greater-element-i/description/
+
+// Solution:
+
+var nextGreaterElement = function(nums1, nums2) {
+    
+    let result = [];
+
+    for (let i = 0; i < nums1.length; i++) {
+        let ele = nums1[i];
+        let noGreaterElem = true;
+        for (let j = nums2.indexOf(ele)+1; j < nums2.length; j++) {
+            if (nums2[j] > ele) {
+                noGreaterElem = false;
+                result.push(nums2[j]);
+                break;
+            }
+        }
+        if (noGreaterElem) result.push(-1);
+    }
+
+    return result;
+
+};
+

@@ -16,3 +16,29 @@
 // Output: [12]
 // Explanation: 12 is the only lucky number since it is the minimum in its row and the maximum in its column.
 
+// Leetcode link: https://leetcode.com/problems/lucky-numbers-in-a-matrix/description/
+
+// Solution:
+
+var luckyNumbers  = function(matrix) {
+    
+    let luckyNumbers = [];
+
+    for (let i = 0; i < matrix.length; i++) {
+        let subMat = matrix[i];
+        let min = Math.min(...subMat);
+        let index = subMat.indexOf(min);
+        let isLucky = true;
+        for (let j = 0; j < matrix.length; j++) {
+            let subArr = matrix[j];
+            if (subArr[index] > min) {
+                isLucky = false;
+            }
+        }
+        if (isLucky) luckyNumbers.push(min);
+    }
+
+    return luckyNumbers;
+
+};
+

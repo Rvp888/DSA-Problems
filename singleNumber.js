@@ -18,3 +18,44 @@
 
 // Input: nums = [1]
 // Output: 1
+
+// Leetcode link: https://leetcode.com/problems/single-number/description/
+
+// Solution:
+
+// Sol-1: using XOR(^). XOR of two smilar numbers = 0. Time comp. = O(n) & Space comp. = O(1).
+var singleNumber = function(nums) {
+
+    let res = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        res = res ^ nums[i];
+    }
+
+    return res;
+
+}
+
+
+// Sol-2: Time comp. = O(n) & Space comp. = O(n).
+
+// var singleNumber = function(nums) {
+    
+//     let obj = {};
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (obj[nums[i]]) {
+//             obj[nums[i]]++;
+//         }
+//         else {
+//             obj[nums[i]] = 1;
+//         }
+//     }
+
+//     for (let key in obj) {
+//         if (obj[key] === 1) {
+//             return key;
+//         }
+//     }
+
+// };

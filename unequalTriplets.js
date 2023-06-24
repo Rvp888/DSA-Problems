@@ -50,3 +50,6 @@ var unequalTriplets = function(nums) {
 
 };
 
+console.log(unequalTriplets(nums = [4,4,2,4,3]));
+
+

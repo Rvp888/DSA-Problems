@@ -59,3 +59,5 @@ var frequencySort = function(nums) {
 
 };
 
+console.log(frequencySort(nums = [2,3,1,3,2]));
+

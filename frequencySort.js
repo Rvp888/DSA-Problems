@@ -17,3 +17,45 @@
 // Output: [1,3,3,2,2]
 // Explanation: '2' and '3' both have a frequency of 2, so they are sorted in decreasing order.
 
+// Leetcode link: https://leetcode.com/problems/sort-array-by-increasing-frequency/description/
+
+// Solution:
+
+var frequencySort = function(nums) {
+    
+    let result = [];
+    let obj = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        if (obj[nums[i]]) {
+            obj[nums[i]]++;
+        }
+        else {
+            obj[nums[i]] = 1;
+        }
+    }
+
+    let values = Object.values(obj);
+    values.sort((a, b) => a - b);
+
+    let keys = Object.keys(obj);
+    keys.sort((a, b) => b - a);
+
+    for (let i = 0; i < values.length; i++) {
+        let freq = values[i];
+        for (let j = 0; j < keys.length; j++) {
+            if (obj[keys[j]] === freq) {
+                while (freq > 0) {
+                    result.push(keys[j]);
+                    freq--;
+                }
+                keys.splice(j, 1);
+                break;
+            }
+        }
+    }
+
+    return result;
+
+};
+

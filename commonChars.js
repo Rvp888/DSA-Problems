@@ -12,3 +12,8 @@
 
 // Input: words = ["cool","lock","cook"]
 // Output: ["c","o"]
+
+// Leetcode link: https://leetcode.com/problems/find-common-characters/description/
+
+// Solution:
+

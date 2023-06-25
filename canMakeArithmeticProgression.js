@@ -37,3 +37,5 @@ var canMakeArithmeticProgression = function(arr) {
 
 };
 
+console.log(canMakeArithmeticProgression(arr = [3,5,1]));
+

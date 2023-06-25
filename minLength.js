@@ -27,3 +27,21 @@
 // Output: 5
 // Explanation: We cannot do any operations on the string so the length remains the same.
 
+// Leetcode link: https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/
+
+// Solution:
+
+var minLength = function(s) {
+    
+    s = s.split("");
+    for (let i = 0; i < s.length-1; i++) {
+        if ((s[i] == "A" && s[i+1] == "B") || (s[i] == "C" && s[i+1] == "D")) {
+            s.splice(i, 2);
+            i = -1;
+        }
+    }
+
+    return s.length;
+
+};
+

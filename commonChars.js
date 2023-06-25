@@ -42,3 +42,5 @@ var commonChars = function(words) {
 
 };
 
+console.log(commonChars(words = ["bella","label","roller"]));
+

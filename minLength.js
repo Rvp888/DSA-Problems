@@ -45,3 +45,5 @@ var minLength = function(s) {
 
 };
 
+console.log(minLength(s = "ABFCACDB"));
+

@@ -14,3 +14,9 @@
 //   For example, the first word gets "a" added to the end, the second word gets "aa" added to the end, and so on.
 
 // Return the final sentence representing the conversion from sentence to Goat Latin.
+
+// Example:
+
+// Input: sentence = "I speak Goat Latin"
+// Output: "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"
+

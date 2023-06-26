@@ -20,3 +20,33 @@
 // Input: sentence = "I speak Goat Latin"
 // Output: "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"
 
+// Leetcode link: https://leetcode.com/problems/goat-latin/description/
+
+// Solution:
+
+var toGoatLatin = function(sentence) {
+    
+    let vowels = "aeiouAEIOU";
+    sentence = sentence.split(" ");
+    let addOns = "a";
+
+    for (let i = 0; i < sentence.length; i++) {
+        let word = sentence[i];
+        if (vowels.includes(word[0])) {
+            word += "ma";
+        }
+        else {
+            word = word.split("");
+            word.push(word.shift());
+            word = word.join("");
+            word += "ma";
+        }
+        word += addOns;
+        sentence[i] = word;
+        addOns += "a";
+    }
+
+    return sentence.join(" ");
+
+};
+

@@ -50,3 +50,5 @@ var toGoatLatin = function(sentence) {
 
 };
 
+console.log(toGoatLatin(sentence = "I speak Goat Latin"));
+

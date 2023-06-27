@@ -21,3 +21,42 @@
 // Given an array of strings emails where we send one email to each emails[i], return the 
 // number of different addresses that actually receive mails.
 
+// Leetcode link: https://leetcode.com/problems/unique-email-addresses/description/
+
+// Solution: 
+
+var numUniqueEmails = function(emails) {
+    
+    let newEmails = [];
+    
+    for (let i = 0; i < emails.length; i++) {
+        let modEmail = "";
+        let email = emails[i];
+        let period = false;
+        let canAdd = true;
+        for (let j = 0; j < email.length; j++) {
+            let char = email[j];
+            if (char === "." && !period) {
+                continue;
+            }
+            if (char === "+" && !modEmail.includes("@")) {
+                canAdd = false;
+                continue;
+            }
+            if (char === "@") {
+                canAdd = true;
+                period = true;
+            }
+            if (canAdd) {
+                modEmail += char;
+            }
+        }
+        if (!newEmails.includes(modEmail)) {
+            newEmails.push(modEmail);
+        }        
+    }
+
+    return newEmails.length;
+
+};
+

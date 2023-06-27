@@ -31,3 +31,29 @@
 // Input: s = "sunset is at 7 51 pm overnight lows will be in the low 50 and 60 s"
 // Output: false
 // Explanation: The numbers in s are: 7, 51, 50, 60. They are not strictly increasing.
+
+// Leetcode link: https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/description/
+
+// Solution:
+
+var areNumbersAscending = function(s) {
+    
+    let resultArr = [];
+    s = s.split(" ");
+
+    for (let i = 0; i < s.length; i++) {
+        if (!isNaN(Number(s[i]))) {
+            resultArr.push(Number(s[i]));
+        }
+    }
+
+    for (let i = 0; i < resultArr.length-1; i++) {
+        if (resultArr[i] >= resultArr[i+1]) {
+            return false;
+        }
+    }
+
+    return true;
+
+};
+

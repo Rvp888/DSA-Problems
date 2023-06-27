@@ -47,6 +47,7 @@ var numberOfLines = function(widths, s) {
         let index = alphabets.indexOf(s[i]);
         let pixels = widths[index];
         sum += pixels;
+        i++;
 
         if (sum <= 100 && i == s.length) {
             result[1] += sum;

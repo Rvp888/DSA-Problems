@@ -33,4 +33,34 @@
 // a            // 4 pixels wide
 // There are a total of 2 lines, and the last line is 4 pixels wide.
 
+// Leetcode link: https://leetcode.com/problems/number-of-lines-to-write-string/description/
 
+// Solution:
+
+var numberOfLines = function(widths, s) {
+
+    let result = [1, 0];
+    let alphabets = "abcdefghijklmnopqrstuvwxyz";
+    let sum = 0, i = 0;
+
+    while (sum <= 100 && i < s.length) {
+        let index = alphabets.indexOf(s[i]);
+        let pixels = widths[index];
+        sum += pixels;
+
+        if (sum <= 100 && i == s.length) {
+            result[1] += sum;
+        }
+        else if (sum > 100 && i == s.length) {
+            result[0]++;
+            result[1] += pixels;
+        }
+        else if (sum > 100 && i < s.length) {
+            result[0]++;
+            sum = pixels;
+        }
+    }
+
+    return result;
+
+}

@@ -64,3 +64,5 @@ var numberOfLines = function(widths, s) {
     return result;
 
 }
+
+console.log(numberOfLines(widths = [4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], s = "bbbcccdddaaa"));

@@ -47,3 +47,5 @@ var uncommonFromSentences = function(s1, s2) {
 
 };
 
+console.log(uncommonFromSentences(s1 = "this apple is sweet", s2 = "this apple is sour"));
+

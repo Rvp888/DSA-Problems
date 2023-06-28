@@ -64,3 +64,4 @@ var countVowelSubstrings = function(word) {
 };
 
 console.log(countVowelSubstrings(word = "cuaieuouac"));
+

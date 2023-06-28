@@ -28,3 +28,37 @@
 // - "cuaieuouac"
 // - "cuaieuouac"
 
+// Leetcode link: https://leetcode.com/problems/count-vowel-substrings-of-a-string/description/
+
+// Solution:
+
+var countVowelSubstrings = function(word) {
+    
+    let result = 0;
+    let vowels = "aeiou";
+
+    for (let i = 0; i < word.length-4; i++) {
+        if (!vowels.includes(word[i])) continue;
+        
+        for (let j = 5; j <= word.length-i; j++) {
+            let subString = word.substr(i, j);
+            let isVowelSubstr = true;
+            if (!subString.includes('a') || !subString.includes('e') || 
+                !subString.includes('i') || !subString.includes('o') || 
+                !subString.includes('u')) {
+                    isVowelSubstr = false;
+                }
+            for (let k = 0; k < subString.length; k++) {
+                if (!vowels.includes(subString[k])) {
+                    isVowelSubstr = false;
+                }
+            }
+            if (isVowelSubstr) {
+                result++;
+            }
+        }
+    }
+
+    return result;
+    
+};

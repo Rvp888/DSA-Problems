@@ -56,3 +56,5 @@ var digitSum = function(s, k) {
     
 };
 
+console.log(digitSum(s = "11111222223", k = 3));
+

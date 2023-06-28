@@ -28,3 +28,8 @@
 //   So, s becomes "13" + "5" = "135" after second round. 
 // Now, s.length <= k, so we return "135" as the answer.
 
+// Example 2:
+
+// Input: s = "00000000", k = 3
+// Output: "000"
+

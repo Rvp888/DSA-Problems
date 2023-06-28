@@ -33,3 +33,26 @@
 // Input: s = "00000000", k = 3
 // Output: "000"
 
+// Leetcode link: https://leetcode.com/problems/calculate-digit-sum-of-a-string/description/
+
+// Solution:
+
+var digitSum = function(s, k) {
+    
+    while (s.length > k) {
+        let temp = "";
+        for (let i = 0; i < s.length; i += k) {
+            let sub = s.substr(i, k);
+            let sum = 0;
+            for (let j = 0; j < sub.length; j++) {
+                sum += Number(sub[j]);
+            }
+            temp += sum;
+        }
+        s = temp;
+    }
+
+    return s;
+    
+};
+

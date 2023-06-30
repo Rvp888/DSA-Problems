@@ -29,3 +29,35 @@
 // Output: "art"
 // Explanation: The word "rat" becomes "art" after re-ordering it with the mentioned algorithm.
 
+// Leetcode link: https://leetcode.com/problems/increasing-decreasing-string/description/
+
+// Solution:
+
+var sortString = function(s) {
+    
+    let result = "";
+    s = s.split("").sort();
+
+    while (s.length) {
+        let temp = [];
+        for (let i = 0; i < s.length; i++) {
+            if (temp.length == 0 || s[i] > temp[temp.length-1]) {
+                temp.push(s[i]);
+                s.splice(i,1);
+                i--;
+            }
+        }
+        let size = temp.length;
+        for (let i = s.length-1; i >= 0; i--) {
+            if (temp.length == size || s[i] < temp[temp.length-1]) {
+                temp.push(s[i]);
+                s.splice(i,1);
+            }
+        }
+        result += temp.join("");
+    }
+
+    return result;
+
+};
+

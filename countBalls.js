@@ -53,4 +53,6 @@ var countBalls = function(lowLimit, highLimit) {
 
 };
 
+console.log(countBalls(lowLimit = 5, highLimit = 15));
+
 

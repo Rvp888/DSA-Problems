@@ -61,3 +61,5 @@ var sortString = function(s) {
 
 };
 
+console.log(sortString(s = "aaaabbbbcccc"));
+

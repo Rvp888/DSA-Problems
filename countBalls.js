@@ -28,4 +28,29 @@
 // Ball Count:  1 1 1 1 2 2 1 1 1 0  0  ...
 // Boxes 5 and 6 have the most number of balls with 2 balls in each.
 
+// Leetcode link: https://leetcode.com/problems/maximum-number-of-balls-in-a-box/description/
+
+// Solution:
+
+var countBalls = function(lowLimit, highLimit) {
+    
+    let boxes = {};
+
+    for (let i = lowLimit; i <= highLimit; i++) {
+        let ballNum = i.toString().split("");
+        let boxNum = ballNum.reduce((a, b) => Number(a) + Number(b));
+        if (boxes[boxNum]) {
+            boxes[boxNum]++;
+        }
+        else {
+            boxes[boxNum] = 1;
+        }
+    }
+
+    let values = Object.values(boxes);
+
+    return Math.max(...values);
+
+};
+
 

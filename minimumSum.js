@@ -40,3 +40,4 @@ var minimumSum = function(num) {
 
 };
 
+console.log(minimumSum(num = 2932));

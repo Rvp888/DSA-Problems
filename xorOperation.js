@@ -19,4 +19,26 @@
 // Output: 8
 // Explanation: Array nums is equal to [3, 5, 7, 9] where (3 ^ 5 ^ 7 ^ 9) = 8.
 
+// Leetcode link: https://leetcode.com/problems/xor-operation-in-an-array/description/
+
+// Solution:
+
+var xorOperation = function(n, start) {
+    
+    let result;
+    let nums = [];
+
+    for (let i = 0; i < n; i++) {
+        nums[i] = start + 2 * i;
+        if (result !== undefined) {
+            result ^= nums[i];
+        }
+        else {
+            result = nums[i];
+        }
+    }
+
+    return result;
+
+};
 

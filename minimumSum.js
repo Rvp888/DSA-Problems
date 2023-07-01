@@ -23,3 +23,20 @@
 // Explanation: Some possible pairs [new1, new2] are [0, 49], [490, 0], etc. 
 // The minimum sum can be obtained by the pair [4, 9]: 4 + 9 = 13.
 
+// Leetcode link: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/description/
+
+// Solution:
+
+var minimumSum = function(num) {
+    
+    num = num.toString();
+    num = num.split("");
+    num = num.sort((a, b) => a - b);
+
+    let firstNum = Number(num[0] + num[2]);
+    let secondNum = Number(num[1] + num[3]);
+
+    return firstNum + secondNum;
+
+};
+

@@ -42,3 +42,5 @@ var xorOperation = function(n, start) {
 
 };
 
+console.log(xorOperation(n = 4, start = 3));
+

@@ -43,3 +43,4 @@ var sumBase = function(n, k) {
 
 };
 
+console.log(sumBase(n = 34, k = 6));

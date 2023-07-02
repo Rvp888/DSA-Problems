@@ -55,4 +55,5 @@ function subsetXORrecursion (nums, curind, subset, xorTotal) {
 
 }
 
+console.log(subsetXORSum(nums = [5,1,6]));
 

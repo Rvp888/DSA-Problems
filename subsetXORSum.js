@@ -35,25 +35,40 @@
 
 // Solution-1:
 
+// var subsetXORSum = function(nums) {
+
+//     return subsetXORrecursion (nums, 0, [], 0);
+
+// }
+
+// function subsetXORrecursion (nums, curind, subset, xorTotal) {
+
+//     xorTotal = subset.reduce((a, b) => a ^ b, 0);
+
+//     for (let i = curind; i < nums.length; i++) {
+//         subset.push(nums[i]);
+//         xorTotal += subsetXORrecursion(nums, i+1, subset, xorTotal);
+//         subset.pop();
+//     }
+
+//     return xorTotal;
+
+// }
+
+// console.log(subsetXORSum(nums = [5,1,6]));
+
+
+// Solution-2:
 var subsetXORSum = function(nums) {
+    
+    let bitwiseOR = 0;
 
-    return subsetXORrecursion (nums, 0, [], 0);
-
-}
-
-function subsetXORrecursion (nums, curind, subset, xorTotal) {
-
-    xorTotal = subset.reduce((a, b) => a ^ b, 0);
-
-    for (let i = curind; i < nums.length; i++) {
-        subset.push(nums[i]);
-        xorTotal += subsetXORrecursion(nums, i+1, subset, xorTotal);
-        subset.pop();
+    for (let i = 0; i < nums.length; i++) {
+        bitwiseOR = bitwiseOR | nums[i];
     }
 
-    return xorTotal;
+    let result = bitwiseOR * (2 ** (nums.length-1));
 
-}
+    return result;
 
-console.log(subsetXORSum(nums = [5,1,6]));
-
+};

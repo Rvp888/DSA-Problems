@@ -51,4 +51,4 @@ var destCity = function(paths) {
 
 };
 
-
+console.log(destCity(paths = [["B","C"],["D","B"],["C","A"]]));

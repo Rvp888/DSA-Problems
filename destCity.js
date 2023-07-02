@@ -25,4 +25,30 @@
 // "A". 
 // Clearly the destination city is "A".
 
+// Leetcode link: https://leetcode.com/problems/destination-city/description/
+
+// Solution:
+
+var destCity = function(paths) {
+    
+    let temp = [];
+
+    for (let i = 0; i < paths.length; i++) {
+        temp.push(...paths[i]);
+    }
+
+    for (let i = 1; i < temp.length; i += 2) {
+        let isDestination = true;
+        for (let j = 0; j < temp.length; j++) {
+            if (temp[i] === temp[j] && j % 2 === 0) {
+                isDestination = false;
+            }
+        }
+        if (isDestination) {
+            return temp[i];
+        }
+    }
+
+};
+
 

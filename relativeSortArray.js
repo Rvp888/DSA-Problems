@@ -15,3 +15,27 @@
 // Input: arr1 = [28,6,22,8,44,17], arr2 = [22,28,8,6]
 // Output: [22,28,8,6,17,44]
 
+// Leetcode link: https://leetcode.com/problems/relative-sort-array/description/
+
+// Solution:
+
+var relativeSortArray = function(arr1, arr2) {
+    
+    let result = [];
+
+    for (let i = 0; i < arr2.length; i++) {
+        let target = arr2[i];
+        while(arr1.includes(target)) {
+            result.push(target);
+            let index = arr1.indexOf(target);
+            arr1.splice(index, 1);
+        }
+    }
+
+    result.push(...arr1.sort((a,b) => a -b));
+
+    return result;
+
+};
+
+

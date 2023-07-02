@@ -16,3 +16,30 @@
 // Output: 1
 // Explanation: n is already in base 10. 1 + 0 = 1.
 
+// Leetcode link: https://leetcode.com/problems/sum-of-digits-in-base-k/description/
+
+// Solution:
+
+var sumBase = function(n, k) {
+    
+    // Conversion from decimal to other bases
+    // 1. We divide the decimal number by base repeatedly until the quotient becomes 0.
+    // 2. Then we write the remainders from last to first.
+    
+    let result = 0;
+    let numOfBaseK = "";
+
+    while(n > 0) {
+        let remainder = n % k;
+        numOfBaseK = remainder + numOfBaseK;
+        n = Math.floor(n / k);
+    }
+
+    for (let i = 0; i < numOfBaseK.length; i++) {
+        result += Number(numOfBaseK[i]);
+    }
+
+    return result;
+
+};
+

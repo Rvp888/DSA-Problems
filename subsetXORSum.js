@@ -31,3 +31,28 @@
 // Output: 480
 // Explanation: The sum of all XOR totals for every subset is 480.
 
+// Leetcode link: https://leetcode.com/problems/sum-of-all-subset-xor-totals/description/
+
+// Solution-1:
+
+var subsetXORSum = function(nums) {
+
+    return subsetXORrecursion (nums, 0, [], 0);
+
+}
+
+function subsetXORrecursion (nums, curind, subset, xorTotal) {
+
+    xorTotal = subset.reduce((a, b) => a ^ b, 0);
+
+    for (let i = curind; i < nums.length; i++) {
+        subset.push(nums[i]);
+        xorTotal += subsetXORrecursion(nums, i+1, subset, xorTotal);
+        subset.pop();
+    }
+
+    return xorTotal;
+
+}
+
+

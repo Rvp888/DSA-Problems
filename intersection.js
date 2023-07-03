@@ -21,43 +21,6 @@
 
 // Solution-1:
 
-// var intersection = function(nums) {
-    
-//     let result = [];
-//     let n = nums.length;
-//     let temp = [];
-//     let obj = {};
-
-//     for (let i = 0; i < nums.length; i++) {
-//         let subArr = nums[i];
-//         temp.push(...subArr);
-//     }
-
-//     for (let i = 0; i < temp.length; i++) {
-//         let num = temp[i];
-//         if (obj[num]) {
-//             obj[num]++;
-//         }
-//         else {
-//             obj[num] = 1;
-//         }
-//     }
-
-//     for (let num in obj) {
-//         if (obj[num] === n) {
-//             result.push(num);
-//         }
-//     }
-
-//     return result;
-
-// };
-
-// console.log(intersection(nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]));
-
-
-
-// Solution-2:
 var intersection = function(nums) {
     
     let result = [];
@@ -78,13 +41,51 @@ var intersection = function(nums) {
         else {
             obj[num] = 1;
         }
+    }
+
+    for (let num in obj) {
         if (obj[num] === n) {
             result.push(num);
         }
     }
 
-    return result.sort((a,b) => a-b);
+    return result;
 
 };
 
 console.log(intersection(nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]));
+
+
+
+// Solution-2:
+// var intersection = function(nums) {
+    
+//     let result = [];
+//     let n = nums.length;
+//     let temp = [];
+//     let obj = {};
+
+//     for (let i = 0; i < nums.length; i++) {
+//         let subArr = nums[i];
+//         temp.push(...subArr);
+//     }
+
+//     for (let i = 0; i < temp.length; i++) {
+//         let num = temp[i];
+//         if (obj[num]) {
+//             obj[num]++;
+//         }
+//         else {
+//             obj[num] = 1;
+//         }
+//         if (obj[num] === n) {
+//             result.push(num);
+//         }
+//     }
+
+//     return result.sort((a,b) => a-b);
+
+// };
+
+// console.log(intersection(nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]));
+

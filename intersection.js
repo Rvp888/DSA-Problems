@@ -17,3 +17,40 @@
 // Explanation: 
 // There does not exist any integer present both in nums[0] and nums[1], so we return an empty list [].
 
+// Leetcode link: https://leetcode.com/problems/intersection-of-multiple-arrays/description/
+
+// Solution-1:
+
+var intersection = function(nums) {
+    
+    let result = [];
+    let n = nums.length;
+    let temp = [];
+    let obj = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        let subArr = nums[i];
+        temp.push(...subArr);
+    }
+
+    for (let i = 0; i < temp.length; i++) {
+        let num = temp[i];
+        if (obj[num]) {
+            obj[num]++;
+        }
+        else {
+            obj[num] = 1;
+        }
+    }
+
+    for (let num in obj) {
+        if (obj[num] === n) {
+            result.push(num);
+        }
+    }
+
+    return result;
+
+};
+
+

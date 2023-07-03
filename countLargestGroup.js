@@ -60,4 +60,4 @@ var countLargestGroup = function(n) {
 
 };
 
-
+console.log(countLargestGroup(n = 13));

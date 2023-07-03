@@ -23,3 +23,24 @@
 // Output: -1
 // Explanation: There is no a single valid k, we return -1.
 
+// Leetcode link: https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/description/
+
+// Solution:
+
+var findMaxK = function(nums) {
+    
+    nums.sort((a, b) => b - a);
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums.includes(-nums[i])) {
+            return nums[i];
+        }
+    }
+
+    return -1;
+
+};
+
+// TC: O(n^2)
+// SC: O(1)
+

@@ -44,3 +44,4 @@ var findMaxK = function(nums) {
 // TC: O(n^2)
 // SC: O(1)
 
+console.log(findMaxK(nums = [-1,10,6,7,-7,1]));

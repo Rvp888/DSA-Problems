@@ -24,3 +24,26 @@
 // Explanation: Alice can only eat 4 / 2 = 2 candies. Whether she eats types [1,2], [1,3], 
 // or [2,3], she still can only eat 2 different types.
 
+// Leetcode link: https://leetcode.com/problems/distribute-candies/description/
+
+// Solution:
+
+var distributeCandies = function(candyType) {
+    
+    let n = candyType.length;
+    let types = [];
+
+    for (let i = 0; i < n; i++) {
+        if (!types.includes(candyType[i])) {
+            types.push(candyType[i]);
+        }
+    }
+
+    if (n/2 > types.length) {
+        return types.length;
+    }
+    else {
+        return n/2;
+    }
+
+};

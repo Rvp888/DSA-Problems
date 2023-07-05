@@ -22,4 +22,36 @@
 // Output: -1
 // Explanation: There are no lucky numbers in the array.
 
+// Leetcode link: https://leetcode.com/problems/find-lucky-integer-in-an-array/description/
+
+// Solution-1:
+var findLucky = function(arr) {
+    
+    let lucky = -1;
+    let obj = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        if (obj[arr[i]]) {
+            obj[arr[i]]++;
+        }
+        else {
+            obj[arr[i]] = 1;
+        }
+    }
+
+    for (let key in obj) {
+        if (obj[key] == key) {
+            lucky = key;
+        }
+    }
+
+    return lucky;
+
+};
+
+// TC => O(n);
+// SC => O(n);
+
+
+
 

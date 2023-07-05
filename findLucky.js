@@ -86,3 +86,5 @@ var findLucky = function(arr) {
 // TC => O(n*log(n));
 // SC => O(n);
 
+console.log(findLucky(arr = [2,2,2,3,3]));
+

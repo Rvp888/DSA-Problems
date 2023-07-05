@@ -49,3 +49,4 @@ var distributeCandies = function(candyType) {
 };
 
 console.log(distributeCandies(candyType = [1,1,2,3]));
+

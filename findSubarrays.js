@@ -47,3 +47,5 @@ var findSubarrays = function(nums) {
 
 };
 
+console.log(findSubarrays(nums = [4,2,4]));
+

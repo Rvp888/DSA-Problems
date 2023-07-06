@@ -47,3 +47,5 @@ var majorityElement = function(nums) {
 // TC => O(n)
 // SC => O(n)
 
+console.log(majorityElement(nums = [2,2,1,1,1,2,2]));
+

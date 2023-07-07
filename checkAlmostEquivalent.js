@@ -27,3 +27,51 @@
 // - 'e' appears 2 times in word1 and 0 times in word2. The difference is 2.
 // - 'f' appears 1 time in word1 and 0 times in word2. The difference is 1.
 
+// Leetcode link: https://leetcode.com/problems/check-whether-two-strings-are-almost-equivalent/description/
+
+// Solution:
+
+var checkAlmostEquivalent = function(word1, word2) {
+    
+    let n = word1.length;
+    let obj1 = {}, obj2 = {};
+
+    for (let i = 0; i < n; i++) {
+        let char1 = word1[i], char2 = word2[i];
+        if (obj1[char1]) {
+            obj1[char1]++;
+        }
+        else {
+            obj1[char1] = 1;
+        }
+        if (obj2[char2]) {
+            obj2[char2]++;
+        }
+        else {
+            obj2[char2] = 1;
+        }
+    }
+
+
+    for (let key in obj1) {
+        if (obj2[key] == undefined) {
+            obj2[key] = 0;
+        }
+        if (Math.abs(obj1[key] - obj2[key]) > 3) {
+            return false;
+        }
+    }
+
+    for (let key in obj2) {
+        if (obj1[key] == undefined) {
+            obj1[key] = 0;
+        }
+        if (Math.abs(obj2[key] - obj1[key]) > 3) {
+            return false;
+        }
+    }
+
+    return true;
+
+};
+

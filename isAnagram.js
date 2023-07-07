@@ -51,4 +51,5 @@ var isAnagram = function(s, t) {
 
 };
 
+console.log(isAnagram(s = "anagram", t = "nagaram"));
 

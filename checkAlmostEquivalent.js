@@ -75,3 +75,5 @@ var checkAlmostEquivalent = function(word1, word2) {
 
 };
 
+//TC => O(n)
+//SC => O(n)

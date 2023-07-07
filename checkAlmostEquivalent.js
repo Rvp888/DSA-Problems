@@ -77,3 +77,5 @@ var checkAlmostEquivalent = function(word1, word2) {
 
 //TC => O(n)
 //SC => O(n)
+
+console.log(checkAlmostEquivalent(word1 = "abcdeef", word2 = "abaaacc"));

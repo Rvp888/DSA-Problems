@@ -40,3 +40,4 @@ var maxNumberOfBalloons = function(text) {
 // TC => O(n)
 // SC => O(n)
 
+console.log(maxNumberOfBalloons(text = "loonbalxballpoon"));

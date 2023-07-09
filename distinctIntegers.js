@@ -53,3 +53,6 @@ var distinctIntegers = function(n) {
 
 };
 
+console.log(distinctIntegers(n = 5));
+
+

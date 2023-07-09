@@ -17,4 +17,21 @@
 // Input: s = "", t = "y"
 // Output: "y"
 
+// Leetcode link: https://leetcode.com/problems/find-the-difference/description/
+
+ // Solution-1:
+ var findTheDifference = function(s, t) {
+    
+    t = t.split("");
+
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        let index = t.indexOf(char);
+        t.splice(index, 1);
+    }
+
+    return t[0];
+
+};
+
 

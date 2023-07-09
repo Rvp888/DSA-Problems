@@ -20,19 +20,39 @@
 // Leetcode link: https://leetcode.com/problems/find-the-difference/description/
 
  // Solution-1:
- var findTheDifference = function(s, t) {
+//  var findTheDifference = function(s, t) {
     
-    t = t.split("");
+//     t = t.split("");
 
-    for (let i = 0; i < s.length; i++) {
-        let char = s[i];
-        let index = t.indexOf(char);
-        t.splice(index, 1);
+//     for (let i = 0; i < s.length; i++) {
+//         let char = s[i];
+//         let index = t.indexOf(char);
+//         t.splice(index, 1);
+//     }
+
+//     return t[0];
+
+// };
+
+// console.log(findTheDifference(s = "abcd", t = "abcde"));
+
+//TC => O(n^2)
+
+
+// Solution-2:
+var findTheDifference = function(s, t) {
+
+    s = s.split("");
+
+    for (let i = 0; i < t.length; i++) {
+        let char = t[i];
+        if (!s.includes(char)) {
+            return char;
+        }
+        let index = s.indexOf(char);
+        s.splice(index, 1);
     }
-
-    return t[0];
 
 };
 
-console.log(findTheDifference(s = "abcd", t = "abcde"));
-
+//TC => O(n^2)

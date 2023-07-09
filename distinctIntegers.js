@@ -30,3 +30,26 @@
 // Since 3 % 2 == 1, 2 will be added to the board. 
 // After a billion days, the only two distinct numbers on the board are 2 and 3. 
 
+// Leetcode link: https://leetcode.com/problems/count-distinct-numbers-on-board/description/
+
+// Solution:
+
+var distinctIntegers = function(n) {
+    
+    let board = [n], k = 0;
+
+    while (k < board.length) {
+        for (let i = 2; i <= n; i++) {
+            if (board[k] % i === 1) {
+                if (!board.includes(i)) {
+                    board.push(i);
+                }                
+            }
+        }
+        k++;
+    }
+
+    return board.length;
+
+};
+

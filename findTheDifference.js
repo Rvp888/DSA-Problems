@@ -34,4 +34,5 @@
 
 };
 
+console.log(findTheDifference(s = "abcd", t = "abcde"));
 

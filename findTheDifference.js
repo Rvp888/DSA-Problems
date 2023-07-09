@@ -34,9 +34,10 @@
 
 // };
 
+//TC => O(n^2)
+
 // console.log(findTheDifference(s = "abcd", t = "abcde"));
 
-//TC => O(n^2)
 
 
 // Solution-2:
@@ -56,3 +57,5 @@ var findTheDifference = function(s, t) {
 };
 
 //TC => O(n^2)
+
+console.log(findTheDifference(s = "", t = "y"));

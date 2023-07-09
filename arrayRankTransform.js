@@ -28,4 +28,30 @@
 // Input: arr = [37,12,28,9,100,56,80,5,12]
 // Output: [5,3,4,2,8,6,7,1,3]
 
+// Leetcode link: https://leetcode.com/problems/rank-transform-of-an-array/description/
+
+// Solution:
+
+var arrayRankTransform = function(arr) {
+    
+    let temp = [...arr];
+    temp = temp.sort((a, b) => a - b);
+
+    for (let i = 0; i < temp.length; i++) {
+        if (temp[i] === temp[i+1]) {
+            temp.splice(i, 1);
+            i--;
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        let index = temp.indexOf(num);
+        arr[i] = index + 1;
+    }
+
+    return arr;
+
+};
+
 

@@ -60,4 +60,5 @@ var mostFrequent = function(nums, key) {
 
 };
 
+console.log(mostFrequent(nums = [2,2,2,2,3], key = 2));
 

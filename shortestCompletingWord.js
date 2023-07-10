@@ -31,4 +31,40 @@
 // but among these "pest", "stew", and "show" are shortest. The answer is "pest" 
 // because it is the word that appears earliest of the 3.
 
+// Leetcode link: https://leetcode.com/problems/shortest-completing-word/description/
+
+// Solution:
+
+var shortestCompletingWord = function(licensePlate, words) {
+    
+    let matchingLetters = licensePlate.match(/[a-z]/gi);
+    let store = [];
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i].split("");
+        let isCompleteWord = true;
+        for (let j = 0; j < matchingLetters.length; j++) {
+            let char = matchingLetters[j].toLowerCase();
+            if (!word.includes(char)) {
+                isCompleteWord = false;
+            }
+            else {
+                let index = word.indexOf(char);
+                word.splice(index, 1);
+            }
+        }
+        if (isCompleteWord) store.push(words[i]);
+    }
+
+    let ans = store[0];
+    for (let i = 1; i < store.length; i++) {
+        if (store[i].length < ans.length) {
+            ans = store[i];
+        }
+    }
+
+    return ans;
+
+};
+
 

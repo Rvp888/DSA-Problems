@@ -28,4 +28,36 @@
 // For target = 3, there is only one occurrence at index 4 which follows an occurrence of key.
 // target = 2 has the maximum number of occurrences following an occurrence of key, so we return 2.
 
+// Leetcode link: https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/description/
+
+// Solution:
+
+var mostFrequent = function(nums, key) {
+    
+    let obj = {};
+
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i-1] === key) {
+            if (obj[nums[i]]) {
+                obj[nums[i]]++;
+            }
+            else {
+                obj[nums[i]] = 1;
+            }
+        }
+    }
+
+    let max = 0;
+    let answer;
+    for (let key in obj) {
+        if (obj[key] > max) {
+            max = obj[key];
+            answer = key;
+        }
+    }
+
+    return answer;
+
+};
+
 

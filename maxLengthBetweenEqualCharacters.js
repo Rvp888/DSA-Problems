@@ -23,3 +23,29 @@
 // Output: -1
 // Explanation: There are no characters that appear twice in s.
 
+// Leetcode link: https://leetcode.com/problems/largest-substring-between-two-equal-characters/description/
+
+// Solution:
+
+var maxLengthBetweenEqualCharacters = function(s) {
+    
+    let result = -1;
+    let arr = [];
+
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        if (arr.includes(char)) {
+            let ind = arr.indexOf(char);
+            let length = (arr.length-1) - ind;
+            if (length > result) result = length;
+            arr.push(char);
+        }
+        else {
+            arr.push(char);
+        }
+    }
+
+    return result;
+
+};
+

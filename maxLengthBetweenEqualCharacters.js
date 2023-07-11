@@ -49,3 +49,4 @@ var maxLengthBetweenEqualCharacters = function(s) {
 
 };
 
+console.log(maxLengthBetweenEqualCharacters(s = "abca"));

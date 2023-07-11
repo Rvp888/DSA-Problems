@@ -21,4 +21,38 @@
 // Output: false
 // Explanation: It is impossible to make all the strings equal using the operation.
 
+// Leetcode link: https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/description/
+
+// Solution:
+
+var makeEqual = function(words) {
+
+    let temp = "";
+    let obj = {};
+
+    for (let i = 0; i < words.length; i++) {
+        temp += words[i];
+    }
+
+    for (let i = 0; i < temp.length; i++) {
+        if (obj[temp[i]]) {
+            obj[temp[i]]++;
+        }
+        else {
+            obj[temp[i]] = 1;
+        }
+    }
+
+    let values = Object.values(obj);
+
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] % words.length !== 0) {
+            return false;
+        }
+    }
+
+    return true;
+
+};
+
 

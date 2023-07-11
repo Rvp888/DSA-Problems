@@ -55,4 +55,5 @@ var makeEqual = function(words) {
 
 };
 
+console.log(makeEqual(words = ["abc","aabc","bc"]));
 

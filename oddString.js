@@ -32,4 +32,35 @@
 
 // Solution:
 
+var oddString = function(words) {
+    
+    let alphabets = "abcdefghijklmnopqrstuvwxyz";
+    let obj = {};
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let diffArr = [];
+        for (let j = 1; j < word.length; j++) {
+            let ind1 = alphabets.indexOf(word[j-1]);
+            let ind2 = alphabets.indexOf(word[j]);
+            let diff = ind2 - ind1;
+            diffArr.push(diff);
+        }
+
+        if (obj[diffArr]) {
+            obj[diffArr] = "same";
+        }
+        else {
+            obj[diffArr] = word;
+        }
+    }
+
+    for (let key in obj) {
+        if (obj[key] !== "same") {
+            return obj[key];
+        }
+    }
+
+};
+
 

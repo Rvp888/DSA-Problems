@@ -63,4 +63,5 @@ var oddString = function(words) {
 
 };
 
+console.log(oddString(words = ["adc","wzy","abc"]));
 

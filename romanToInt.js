@@ -79,3 +79,4 @@ var romanToInt = function(s) {
 
 };
 
+console.log(romanToInt(s = "MCMXCIV"));

@@ -40,4 +40,4 @@ var canConstruct = function(ransomNote, magazine) {
 
 };
 
-
+console.log(canConstruct(ransomNote = "aa", magazine = "aab"));

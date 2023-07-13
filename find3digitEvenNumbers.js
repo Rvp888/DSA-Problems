@@ -68,4 +68,5 @@ var findEvenNumbers = function(digits) {
 // TC => O(n^4)
 // SC => O(n)
 
+console.log(findEvenNumbers(digits = [2,1,3,0]));
 

@@ -31,4 +31,41 @@
 // Output: []
 // Explanation: No even integers can be formed using the given digits.
 
+// Leetcode link: https://leetcode.com/problems/finding-3-digit-even-numbers/description/
+
+// Solution:
+
+var findEvenNumbers = function(digits) {
+    
+    let intArr = [];
+
+    for (let i = 0; i < digits.length; i++) {
+        let num1 = digits[i]*100;
+        if (num1 != 0) {
+            for (let j = 0; j < digits.length; j++) {
+                if (j != i) {
+                    let num2 = digits[j]*10;
+                    for (let k = 0; k < digits.length; k++) {
+                        if (k != i && k != j) {
+                            let num3 = digits[k];
+                            if (num3 % 2 == 0) {
+                                let integer = num1 + num2 + num3;
+                                if (!intArr.includes(integer)){
+                                    intArr.push(integer);
+                                }
+                            }   
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+    return intArr.sort((a, b) => a - b);
+
+};
+
+// TC => O(n^4)
+// SC => O(n)
+
 

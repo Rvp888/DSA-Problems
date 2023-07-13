@@ -5,4 +5,16 @@
 
 // Each letter in magazine can only be used once in ransomNote.
 
+// Example 1:
+
+// Input: ransomNote = "aa", magazine = "ab"
+// Output: false
+
+// Example 2:
+
+// Input: ransomNote = "aa", magazine = "aab"
+// Output: true
+
+// Leetcode link: https://leetcode.com/problems/ransom-note/description/
+
 

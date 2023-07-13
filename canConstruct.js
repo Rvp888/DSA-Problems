@@ -17,4 +17,27 @@
 
 // Leetcode link: https://leetcode.com/problems/ransom-note/description/
 
+// Solution:
+
+var canConstruct = function(ransomNote, magazine) {
+    
+    if (magazine.length < ransomNote.length) return false;
+
+    magazine = magazine.split("");
+
+    for (let i = 0; i < ransomNote.length; i++) {
+        let char = ransomNote[i];
+        if (!magazine.includes(char)) {
+            return false;
+        }
+        else {
+            let index = magazine.indexOf(char);
+            magazine.splice(index, 1);
+        }
+    }
+
+    return true;
+
+};
+
 

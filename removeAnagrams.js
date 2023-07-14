@@ -89,3 +89,5 @@ var removeAnagrams = function(words) {
 
 // TC => O(n^3)
 
+console.log(removeAnagrams(words = ["a","b","c","d","e"]));
+

@@ -56,3 +56,4 @@ var removeAnagrams = function(words) {
 
 // TC => O(n^2(log n));
 
+console.log(removeAnagrams(words = ["abba","baba","bbaa","cd","cd"]));

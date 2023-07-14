@@ -36,58 +36,58 @@
 // Leetcode link: https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/description/
 
 // Solution-1:
-// var removeAnagrams = function(words) {
-
-//     for (let i = 1; i < words.length; i++) {
-
-//         let sortedCurrentWord = words[i].split("").sort().join("");
-//         let sortedPreviousWord = words[i-1].split("").sort().join("");
-
-//         if (sortedCurrentWord === sortedPreviousWord) {
-//             words.splice(i, 1);
-//             i--;
-//         }
-
-//     }
-
-//     return words;
-
-// }
-
-// // TC => O(n^2(log n));
-
-// console.log(removeAnagrams(words = ["abba","baba","bbaa","cd","cd"]));
-
-
-// Solution-2:
 var removeAnagrams = function(words) {
-    
+
     for (let i = 1; i < words.length; i++) {
-        let word1 = words[i], word2 = words[i-1];
-        if (word1.length != word2.length) continue;
-        let isAnagram = true;
-        word2 = word2.split("");
-        for (let j = 0; j < word1.length; j++) {
-            let char = word1[j];
-            if (!word2.includes(char)) {
-                isAnagram = false;
-            }
-            else {
-                let index = word2.indexOf(char);
-                word2.splice(index, 1);
-            }
-        }
-        if (isAnagram) {
+
+        let sortedCurrentWord = words[i].split("").sort().join("");
+        let sortedPreviousWord = words[i-1].split("").sort().join("");
+
+        if (sortedCurrentWord === sortedPreviousWord) {
             words.splice(i, 1);
             i--;
         }
+
     }
 
     return words;
 
-};
+}
 
-// TC => O(n^3)
+// TC => O(n^2(log n));
 
-console.log(removeAnagrams(words = ["a","b","c","d","e"]));
+console.log(removeAnagrams(words = ["abba","baba","bbaa","cd","cd"]));
+
+
+// Solution-2:
+// var removeAnagrams = function(words) {
+    
+//     for (let i = 1; i < words.length; i++) {
+//         let word1 = words[i], word2 = words[i-1];
+//         if (word1.length != word2.length) continue;
+//         let isAnagram = true;
+//         word2 = word2.split("");
+//         for (let j = 0; j < word1.length; j++) {
+//             let char = word1[j];
+//             if (!word2.includes(char)) {
+//                 isAnagram = false;
+//             }
+//             else {
+//                 let index = word2.indexOf(char);
+//                 word2.splice(index, 1);
+//             }
+//         }
+//         if (isAnagram) {
+//             words.splice(i, 1);
+//             i--;
+//         }
+//     }
+
+//     return words;
+
+// };
+
+// // TC => O(n^3)
+
+// console.log(removeAnagrams(words = ["a","b","c","d","e"]));
 

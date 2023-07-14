@@ -36,57 +36,57 @@
 // Leetcode link: https://leetcode.com/problems/number-of-distinct-averages/description/
 
  // Solution-1:
-//  var distinctAverages = function(nums) {
+ var distinctAverages = function(nums) {
     
-//     let result = [];
-//     nums.sort((a, b) => a - b);
-//     let i = 0, j = nums.length-1;
-
-//     while (i < j) {
-//         let avg = (nums[i] + nums[j]) / 2;
-//         i++, j--;
-//         if (!result.includes(avg)) {
-//             result.push(avg);
-//         }
-//     }
-
-//     return result.length;
-
-// };
-
-// // TC => O(n log(n))
-// // SC => O(n)
-
-// console.log(distinctAverages(nums = [4,1,4,0,3,5]));
-
-
-// Solution-2:
-var distinctAverages = function(nums) {
-
     let result = [];
+    nums.sort((a, b) => a - b);
+    let i = 0, j = nums.length-1;
 
-    while (nums.length) {
-
-        let min = Math.min(...nums);
-        let max = Math.max(...nums);
-        let avg = (min + max) / 2;
-
+    while (i < j) {
+        let avg = (nums[i] + nums[j]) / 2;
+        i++, j--;
         if (!result.includes(avg)) {
             result.push(avg);
         }
-
-        let minIndex = nums.indexOf(min);
-        nums.splice(minIndex, 1);
-        let maxIndex = nums.indexOf(max);
-        nums.splice(maxIndex, 1);
-        
     }
 
     return result.length;
 
-}
+};
 
-// TC => O(n^2)
+// TC => O(n log(n))
 // SC => O(n)
 
-console.log(distinctAverages(nums = [1,100]));
+console.log(distinctAverages(nums = [4,1,4,0,3,5]));
+
+
+// Solution-2:
+// var distinctAverages = function(nums) {
+
+//     let result = [];
+
+//     while (nums.length) {
+
+//         let min = Math.min(...nums);
+//         let max = Math.max(...nums);
+//         let avg = (min + max) / 2;
+
+//         if (!result.includes(avg)) {
+//             result.push(avg);
+//         }
+
+//         let minIndex = nums.indexOf(min);
+//         nums.splice(minIndex, 1);
+//         let maxIndex = nums.indexOf(max);
+//         nums.splice(maxIndex, 1);
+        
+//     }
+
+//     return result.length;
+
+// }
+
+// // TC => O(n^2)
+// // SC => O(n)
+
+// console.log(distinctAverages(nums = [1,100]));

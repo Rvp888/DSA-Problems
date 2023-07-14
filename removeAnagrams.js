@@ -33,3 +33,26 @@
 // Explanation:
 // No two adjacent strings in words are anagrams of each other, so no operations are performed.
 
+// Leetcode link: https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/description/
+
+// Solution-1:
+var removeAnagrams = function(words) {
+
+    for (let i = 1; i < words.length; i++) {
+
+        let sortedCurrentWord = words[i].split("").sort().join("");
+        let sortedPreviousWord = words[i-1].split("").sort().join("");
+
+        if (sortedCurrentWord === sortedPreviousWord) {
+            words.splice(i, 1);
+            i--;
+        }
+
+    }
+
+    return words;
+
+}
+
+// TC => O(n^2(log n));
+

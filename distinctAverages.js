@@ -88,3 +88,5 @@ var distinctAverages = function(nums) {
 
 // TC => O(n^2)
 // SC => O(n)
+
+console.log(distinctAverages(nums = [1,100]));

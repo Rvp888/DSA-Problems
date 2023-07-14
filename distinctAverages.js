@@ -56,3 +56,6 @@
 
 // TC => O(n log(n))
 // SC => O(n)
+
+console.log(distinctAverages(nums = [4,1,4,0,3,5]));
+

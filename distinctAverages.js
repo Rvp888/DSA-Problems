@@ -33,4 +33,26 @@
 // Explanation:
 // There is only one average to be calculated after removing 1 and 100, so we return 1.
 
+// Leetcode link: https://leetcode.com/problems/number-of-distinct-averages/description/
 
+ // Solution-1:
+ var distinctAverages = function(nums) {
+    
+    let result = [];
+    nums.sort((a, b) => a - b);
+    let i = 0, j = nums.length-1;
+
+    while (i < j) {
+        let avg = (nums[i] + nums[j]) / 2;
+        i++, j--;
+        if (!result.includes(avg)) {
+            result.push(avg);
+        }
+    }
+
+    return result.length;
+
+};
+
+// TC => O(n log(n))
+// SC => O(n)

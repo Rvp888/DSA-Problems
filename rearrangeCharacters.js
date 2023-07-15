@@ -48,3 +48,5 @@ var rearrangeCharacters = function(s, target) {
 
 };
 
+console.log(rearrangeCharacters(s = "ilovecodingonleetcode", target = "code"));
+

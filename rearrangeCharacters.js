@@ -14,11 +14,37 @@
 // The strings that are formed are "ecod" and "code" which can both be rearranged into "code".
 // We can make at most two copies of "code", so we return 2.
 
-// Example 3:
+// Example 2:
 
 // Input: s = "abbaccaddaeea", target = "aaaaa"
 // Output: 1
 // Explanation:
 // We can make one copy of "aaaaa" by taking the letters at indices 0, 3, 6, 9, and 12.
 // We can make at most one copy of "aaaaa", so we return 1.
+
+// Leetcode link: https://leetcode.com/problems/rearrange-characters-to-make-target-string/description/
+
+// Solution:
+
+var rearrangeCharacters = function(s, target) {
+    
+    s = s.split("");
+    let count = 0;
+    while (true) {
+        for (let i = 0; i < target.length; i++) {
+            let char = target[i];
+            if (!s.includes(char)) {
+                return count;
+            }
+            else {
+                let index = s.indexOf(char);
+                s.splice(index, 1);
+            }
+        }
+        count++;
+    }
+    
+    return count;
+
+};
 

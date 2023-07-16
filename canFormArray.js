@@ -48,4 +48,5 @@ var canFormArray = function(arr, pieces) {
 
 };
 
+console.log(canFormArray(arr = [91,4,64,78], pieces = [[78],[4,64],[91]]));
 

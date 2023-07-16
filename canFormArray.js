@@ -25,4 +25,27 @@
 // Output: true
 // Explanation: Concatenate [91] then [4,64] then [78]
 
+// Leetcode link: https://leetcode.com/problems/check-array-formation-through-concatenation/description/
+
+// Solution:
+
+var canFormArray = function(arr, pieces) {
+
+    arr = arr.join();
+
+    if (arr.length != pieces.join().length) {
+        return false;
+    }
+
+    for (let i = 0; i < pieces.length; i++) {
+        let piece = pieces[i].join();
+        if (!arr.includes(piece)) {
+            return false;
+        }
+    }
+
+    return true;
+
+};
+
 

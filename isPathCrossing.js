@@ -52,5 +52,5 @@ var isPathCrossing = function(path) {
 // TC => O(n^2)
 // SC => O(n)
 
-
+console.log(isPathCrossing(path = "NESWW"));
 

@@ -19,3 +19,38 @@
 // Output: true
 // Explanation: Notice that the path visits the origin twice.
 
+// Leetcode link: https://leetcode.com/problems/path-crossing/description/
+
+// Solution:
+
+var isPathCrossing = function(path) {
+    
+    let arr = [];
+    let obj = {x: 0, y: 0};
+    let str = JSON.stringify(obj);
+    arr.push(str);
+
+    for (let i = 0; i < path.length; i++) {
+        let char = path[i];
+        
+        if (char == 'N') obj['y']++;
+        else if (char == 'S') obj['y']--;
+        else if (char == 'E') obj['x']++;
+        else if (char == 'W') obj['x']--;
+
+        str = JSON.stringify(obj);
+        if (arr.includes(str)) {
+            return true;
+        }
+        arr.push(str);
+    }
+
+    return false;
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+
+
+

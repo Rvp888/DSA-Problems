@@ -59,3 +59,4 @@ var findMiddleIndex = function(nums) {
 // Sc => O(1)
 
 console.log(findMiddleIndex(nums = [2,3,-1,8,4]));
+

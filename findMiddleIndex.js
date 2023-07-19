@@ -55,3 +55,4 @@ var findMiddleIndex = function(nums) {
 
 };
 
+

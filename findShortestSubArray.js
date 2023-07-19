@@ -69,3 +69,6 @@ var findShortestSubArray = function(nums) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(findShortestSubArray(nums = [1,2,2,3,1]));
+
+

@@ -24,3 +24,48 @@
 // The degree is 3 because the element 2 is repeated 3 times.
 // So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
 
+// Leetcode link: https://leetcode.com/problems/degree-of-an-array/description/
+
+// Solution:
+
+var findShortestSubArray = function(nums) {
+    
+    let arr = [];
+    let obj = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        if (obj[nums[i]]) {
+            obj[nums[i]]++;
+        }
+        else {
+            obj[nums[i]] = 1;
+        }
+    }
+
+    let values = Object.values(obj);
+
+    let maxFreq = Math.max(...values);
+
+    for (let key in obj) {
+        if (obj[key] == maxFreq) {
+            arr.push(key);
+        }
+    } 
+
+    let shortLength = nums.length;
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = Number(arr[i]);
+        let length = nums.lastIndexOf(num) - nums.indexOf(num) + 1;
+        if (length < shortLength) {
+            shortLength = length;
+        }
+    }
+
+    return shortLength;
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+

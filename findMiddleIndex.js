@@ -31,3 +31,27 @@
 // Output: -1
 // Explanation: There is no valid middleIndex.
 
+// Leetcode link: https://leetcode.com/problems/find-the-middle-index-in-array/description/
+
+// Solution:
+
+var findMiddleIndex = function(nums) {
+    
+    let rightSum = nums.reduce((a, b) => a + b);
+    let leftSum = 0;
+
+    let i = 0, j = nums.length;
+
+    while (i < j) {
+        rightSum -= nums[i];
+        leftSum += nums[i-1] || 0;
+        if (leftSum == rightSum) {
+            return i;
+        }
+        i++;
+    }  
+
+    return -1;                                        
+
+};
+

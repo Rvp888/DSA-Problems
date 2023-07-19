@@ -55,4 +55,7 @@ var findMiddleIndex = function(nums) {
 
 };
 
+// TC => O(n)
+// Sc => O(1)
 
+console.log(findMiddleIndex(nums = [2,3,-1,8,4]));

@@ -27,4 +27,29 @@
 // At i = 1: only 3 is common in A and B, so C[1] = 1.
 // At i = 2: 1, 2, and 3 are common in A and B, so C[2] = 3.
 
+// Leetcode link: https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/
+
+// Solution:
+
+var findThePrefixCommonArray = function(A, B) {
+    
+    let result = [];
+    let n = A.length;
+
+    for (let i = 0; i < n; i++) {
+        let slice1 = A.slice(0, i+1);
+        let slice2 = B.slice(0, i+1);
+        let count = 0;
+        for (let j = 0; j < slice1.length; j++) {
+            let int = slice1[j];
+            if (slice2.includes(int)) {
+                count++;
+            }
+        }
+        result.push(count);
+    }
+
+    return result;
+
+};
 

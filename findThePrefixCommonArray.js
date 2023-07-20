@@ -53,3 +53,5 @@ var findThePrefixCommonArray = function(A, B) {
 
 };
 
+console.log(findThePrefixCommonArray(A = [2,3,1], B = [3,1,2]));
+

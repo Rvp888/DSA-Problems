@@ -35,3 +35,51 @@
 // There is one user with a UAM of 1 and one with a UAM of 2.
 // Hence, answer[1] = 1, answer[2] = 1, and the remaining values are 0.
 
+// Leetcode link: https://leetcode.com/problems/finding-the-users-active-minutes/description/
+
+// Solution:
+
+var findingUsersActiveMinutes = function(logs, k) {
+    
+    let obj = {};
+
+    for (let i = 0; i < logs.length; i++) {
+        let [id, minute] = logs[i];
+        if (obj[id]) {
+            if (!obj[id].includes(minute)) {
+                obj[id].push(minute);
+            }
+        }
+        else {
+           obj[id] = [minute]; 
+        }
+    }
+
+    let UAMs = Object.values(obj);
+    let numOfUsers = {};
+
+    for (let i = 0; i < UAMs.length; i++) {
+        let UAM = UAMs[i].length;
+        if (numOfUsers[UAM]) {
+            numOfUsers[UAM]++;
+        }
+        else {
+            numOfUsers[UAM] = 1;
+        }
+    }
+
+    let result = [];
+
+    for (let i = 1; i <= k; i++) {
+        if (numOfUsers[i]) {
+            result.push(numOfUsers[i]);
+        }
+        else {
+            result.push(0);
+        }
+    }
+
+    return result;
+
+};
+

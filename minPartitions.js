@@ -35,3 +35,6 @@ var minPartitions = function(n) {
 
 };
 
+console.log(minPartitions(n = "82734"));
+
+

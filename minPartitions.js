@@ -22,3 +22,16 @@
 // Input: n = "27346209830709182346"
 // Output: 9
 
+// Leetcode link: https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/description/
+
+// Solution:
+
+var minPartitions = function(n) {
+    
+    // Here the answer is largest digit in the given number 'n'.
+    let arr = Array.from(n);
+
+    return Math.max(...arr);
+
+};
+

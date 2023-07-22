@@ -22,6 +22,33 @@
 // Input: s = "eccbbbbdec"
 // Output: [10]
 
+// Leetcode link: https://leetcode.com/problems/partition-labels/description/
+
+// Solution:
+
+var partitionLabels = function(s) {
+    
+    let result = [];
+
+    while (s.length) {
+        let leftPart = s[0];
+        s = s.slice(1);
+        for (let i = 0; i < leftPart.length; i++) {
+            let char = leftPart[i];
+            if (s.includes(char)) {
+                let lastIndex = s.lastIndexOf(char);
+                leftPart += s.slice(0, lastIndex+1);
+                s = s.slice(lastIndex+1);
+            }
+            if (s.length == 0) break;
+        }
+        result.push(leftPart.length);
+    }
+
+    return result;
+
+};
+
 
 
 

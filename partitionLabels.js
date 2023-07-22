@@ -49,6 +49,7 @@ var partitionLabels = function(s) {
 
 };
 
+console.log(partitionLabels(s = "ababcbacadefegdehijhklij"));
 
 
 

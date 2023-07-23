@@ -50,3 +50,5 @@ var countDistinctIntegers = function(nums) {
 
 };
 
+console.log(countDistinctIntegers(nums = [1,13,10,12,31]));
+

@@ -23,3 +23,30 @@
 // Explanation: After including the reverse of each number, the resulting array is [2,2,2,2,2,2].
 // The number of distinct integers in this array is 1 (The number 2).
 
+// Leetcode link: https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/description/
+
+// Solution:
+
+var countDistinctIntegers = function(nums) {
+    
+    let set = new Set(nums);
+    let size = nums.length;
+
+    for (let i = 0; i < size; i++) {
+        let int = nums[i];
+        int = int.toString().split("");
+        let reversedInt = int.reverse();
+        reversedInt = reversedInt.join("");
+        reversedInt = Number(reversedInt);
+        // let reversedInt = 0;
+        // for (let i = int; i > 0; i = Math.floor(i/10)) {
+        //     let mod = i % 10;
+        //     reversedInt = reversedInt*10 + mod;
+        // }
+        set.add(reversedInt);
+    }
+
+    return set.size;
+
+};
+

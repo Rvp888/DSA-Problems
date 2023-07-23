@@ -47,4 +47,5 @@ var partitionString = function(s) {
 
 };
 
+console.log(partitionString(s = "abacaba"));
 

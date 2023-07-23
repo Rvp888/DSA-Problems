@@ -22,4 +22,29 @@
 // Explanation:
 // The only valid partition is ("s","s","s","s","s","s").
 
+// Leetcode link: https://leetcode.com/problems/optimal-partition-of-string/description/
+
+// Solution:
+
+var partitionString = function(s) {
+    
+    let substrings = [];
+    let sub = "";
+
+    for (let i = 0; i < s.length; i++) {
+        if (sub.includes(s[i])) {
+           substrings.push(sub); 
+           sub = "";
+           i--;
+        }
+        else {
+            sub += s[i];
+        }
+        if (i == s.length-1) substrings.push(sub); 
+    }
+
+    return substrings.length;
+
+};
+
 

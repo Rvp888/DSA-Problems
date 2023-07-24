@@ -18,4 +18,21 @@
 // - s = "dababc", remove "abc" starting at index 3, so s = "dab".
 // Now s has no occurrences of "abc".
 
+// Leetcode link: https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
+
+// Solution: 
+
+var removeOccurrences = function(s, part) {
+    
+    while (s.includes(part)) {
+        let index = s.indexOf(part);
+        s = s.split("");
+        s.splice(index, part.length);
+        s = s.join("");
+    }
+
+    return s;
+
+};
+
 

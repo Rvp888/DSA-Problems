@@ -35,4 +35,7 @@ var removeOccurrences = function(s, part) {
 
 };
 
+// TC => O(n)
+// SC => O(1)
+
 

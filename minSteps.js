@@ -26,3 +26,40 @@
 // Output: 0
 // Explanation: "anagram" and "mangaar" are anagrams.
 
+// Leetcode link: https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/
+
+// Solution: 
+
+var minSteps = function(s, t) {
+    
+    let count = 0;
+    let obj = {};
+    
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        if (obj[char]) {
+            obj[char]++;
+        }
+        else {
+            obj[char] = 1;
+        }
+    }
+
+    for (let i = 0; i < t.length; i++) {
+        let char = t[i];
+        if (obj[char]) {
+            obj[char]--;
+        }
+        else {
+            count++;
+        }
+    }
+
+    return count;
+
+};
+
+// TC => O(n);
+// SC => O(n);
+
+

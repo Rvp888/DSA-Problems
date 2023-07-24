@@ -38,4 +38,5 @@ var removeOccurrences = function(s, part) {
 // TC => O(n)
 // SC => O(1)
 
+console.log(removeOccurrences(s = "daabcbaabcbc", part = "abc"));
 

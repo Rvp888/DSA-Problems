@@ -28,7 +28,7 @@
 
 // Leetcode link: https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/
 
-// Solution: 
+// Solution-1: 
 
 var minSteps = function(s, t) {
     
@@ -62,4 +62,26 @@ var minSteps = function(s, t) {
 // TC => O(n);
 // SC => O(n);
 
+// Solution-2:
+
+// var minSteps = function(s, t) {
+    
+//     t = Array.from(t);
+    
+//     for (let i = 0; i < t.length; i++) {
+//         let char = t[i];
+        
+//         let index = t.indexOf(char);
+//         if (index < 0) continue;
+//         t.splice(index, 1);
+        
+//     }
+
+//     return t.length;
+
+// };  
+// Time limit exceeds
+
+// TC => O(n^2);
+// SC => O(1);
 

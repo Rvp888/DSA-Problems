@@ -22,4 +22,31 @@
 // Input: s = "((("
 // Output: 3
 
+// Leetcode link: https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/
+
+// Solution:
+
+var minAddToMakeValid = function(s) {
+    
+    let store = [];
+    let count = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === "(") {
+            store.push(s[i]);
+        }
+        else if (s[i] === ")") {
+            if (store[store.length-1] === "(") {
+                store.pop();
+            }
+            else {
+                count++;
+            }
+        }
+    }
+
+    return store.length + count;
+
+};
+
 

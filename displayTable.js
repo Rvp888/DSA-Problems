@@ -25,3 +25,57 @@
 // For the table 5: Carla orders "Water" and "Ceviche".
 // For the table 10: Corina orders "Beef Burrito".
 
+// Leetcode link: https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/
+
+// Solution:
+
+var displayTable = function(orders) {
+    
+    let tables = {};
+    let foods = [];
+    let tabNums = [];
+    let result = [];
+
+    for (let i = 0; i < orders.length; i++) {
+        let order = orders[i];
+        if (!foods.includes(order[2])) {
+            foods.push(order[2]);
+        }
+        if (!tabNums.includes(order[1])) {
+            tabNums.push(order[1]);
+        }
+        if (tables[order[1]]) {
+            if (tables[order[1]][order[2]]) {
+                tables[order[1]][order[2]]++;
+            }
+            else {
+                tables[order[1]][order[2]] = 1;
+            }    
+        }
+        else {
+            tables[order[1]] = {[order[2]]: 1};
+        }
+    }
+
+    foods.sort().unshift("Table");
+
+    result.push(foods);
+
+    tabNums.sort((a,b) => a-b);
+
+    for (let i = 0; i < tabNums.length; i++) {
+        let row = [tabNums[i]];
+        for (let j = 1; j < foods.length; j++) {
+            let col = tables[tabNums[i]][foods[j]]?.toString() || "0";
+            row.push(col);
+        }
+        result.push(row);
+    }
+
+    return result;
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+

@@ -79,3 +79,7 @@ var displayTable = function(orders) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(displayTable([["David","3","Ceviche"],["Corina","10","Beef Burrito"],["David","3","Fried Chicken"],
+["Carla","5","Water"],["Carla","5","Ceviche"],["Rous","3","Ceviche"]]));
+
+

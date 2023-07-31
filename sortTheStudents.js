@@ -18,3 +18,28 @@
 // - The student with index 0 scored 9 in exam 2, which is the second highest score, so they got second place.
 // - The student with index 2 scored 3 in exam 2, which is the lowest score, so they got third place.
 
+// Leetcode link: https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/
+
+// Solution: 
+
+var sortTheStudents = function(score, k) {
+    
+    let obj = {};
+    let result = [];
+
+    for (let i = 0; i < score.length; i++) {
+        let student = score[i];
+        obj[student[k]] = student;
+    }
+
+    for (let ele in obj) {
+        result.unshift(obj[ele]);
+    }
+
+    return result;
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+

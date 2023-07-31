@@ -43,3 +43,5 @@ var sortTheStudents = function(score, k) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(sortTheStudents(score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k = 2));
+

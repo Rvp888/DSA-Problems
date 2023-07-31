@@ -65,4 +65,5 @@ var groupThePeople = function(groupSizes) {
  // TC => O(n^3)
  // SC => O(n)
 
- 
+console.log(groupThePeople(groupSizes = [2,1,3,3,3,2]));
+

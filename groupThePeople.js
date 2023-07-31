@@ -27,4 +27,42 @@
 // Input: groupSizes = [2,1,3,3,3,2]
 // Output: [[1],[0,5],[2,3,4]]
 
+// Leetcode link: https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/
 
+// Solution:
+
+var groupThePeople = function(groupSizes) {
+   
+    let result = [];
+    let obj = {};
+ 
+    for (let i = 0; i < groupSizes.length; i++) {
+        let size = groupSizes[i];
+        if (obj[size]) {
+            obj[size].push(i);
+        }
+        else {
+            obj[size] = [i];
+        }
+    }
+ 
+    for (let size in obj) {
+        let members = obj[size];
+        let group = [];
+        for (let each of members) {
+            group.push(each);
+            if (group.length == size) {
+                result.push(group);
+                group = [];
+            }
+        }
+    }
+ 
+    return result;
+ 
+ };
+ 
+ // TC => O(n^3)
+ // SC => O(n)
+
+ 

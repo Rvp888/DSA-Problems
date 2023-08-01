@@ -39,3 +39,9 @@ var findArray = function(pref) {
 
 };
 
+// TC => O(n^2)
+// SC => O(n)
+
+console.log(findArray(pref = [5,2,0,3,1]));
+
+

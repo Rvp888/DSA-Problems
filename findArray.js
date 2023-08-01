@@ -19,3 +19,23 @@
 // - pref[3] = 5 ^ 7 ^ 2 ^ 3 = 3.
 // - pref[4] = 5 ^ 7 ^ 2 ^ 3 ^ 2 = 1.
 
+// Leetcode link: https://leetcode.com/problems/find-the-original-array-of-prefix-xor/description/
+
+// Solution:
+
+var findArray = function(pref) {
+    
+    // Note: a ^ b = c => a ^ c = b => c ^ b = a
+
+    let output = [pref[0]];
+
+    for (let i = 1; i < pref.length; i++) {
+        let curNum = pref[i];
+        let preNum = pref[i-1];
+        output.push(preNum ^ curNum);
+    }
+
+    return output;
+
+};
+

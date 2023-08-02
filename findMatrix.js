@@ -28,4 +28,28 @@
 // Output: [[4,3,2,1]]
 // Explanation: All elements of the array are distinct, so we can keep all of them in the first row of the 2D array.
 
+// Leetcode link: https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/
+
+// Solution: 
+
+var findMatrix = function(nums) {
+    
+    let result = [];
+
+    while (nums.length) {
+        let row = [];
+        for (let i = 0; i < nums.length; i++) {
+            if (!row.includes(nums[i])) {
+                row.push(nums[i]);
+                nums.splice(i, 1)
+                i--;
+            }
+        }
+        result.push(row);
+    }
+
+    return result;
+
+};
+
 

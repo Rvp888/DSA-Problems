@@ -51,4 +51,8 @@ var pivotArray = function(nums, pivot) {
 
 };
 
+// TC => O(n^2)
+// SC => O(n)
+
+console.log(pivotArray(nums = [9,12,5,10,14,3,10], pivot = 10));
 

@@ -52,4 +52,8 @@ var maxSatisfaction = function(satisfaction) {
 
 };
 
+// TC => O(n^2)
+// SC => O(1)
+
+console.log(maxSatisfaction(satisfaction = [-1,-8,0,5,-9]));
 

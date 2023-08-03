@@ -28,4 +28,28 @@
 // Output: 0
 // Explanation: People do not like the dishes. No dish is prepared.
 
+// Leetcode link: https://leetcode.com/problems/reducing-dishes/description/
+
+// Solution:
+
+var maxSatisfaction = function(satisfaction) {
+    
+    satisfaction.sort((a, b) => a - b);
+    let maxSum = 0;
+
+    while (satisfaction.length) {
+        let sum = 0;
+        let time = 1;
+        for (let i = 0; i < satisfaction.length; i++) {
+            sum += satisfaction[i] * time;
+            time++;
+        }
+        if (sum > maxSum) maxSum = sum;
+        satisfaction.shift();
+    }
+    
+    return maxSum;
+
+};
+
 

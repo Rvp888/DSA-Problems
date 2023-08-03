@@ -21,4 +21,29 @@
 // For i=3: queries[i]=1, P=[2,1,3,4,5], position of 1 in P is 1, then we move 1 to the beginning of P resulting in P=[1,2,3,4,5]. 
 // Therefore, the array containing the result is [2,1,2,1].
 
+// Leetcode link: https://leetcode.com/problems/queries-on-a-permutation-with-key/description/
+
+// Solution:
+
+var processQueries = function(queries, m) {
+    
+    let output = [];
+    let permutation = [];
+
+    for (let i = 1; i <= m; i++) {
+        permutation.push(i);
+    }
+
+    for (let i = 0; i < queries.length; i++) {
+        let query = queries[i];
+        let index = permutation.indexOf(query);
+        output.push(index);
+        permutation.splice(index, 1);
+        permutation.unshift(query);
+    }
+
+    return output;
+
+};
+
 

@@ -41,4 +41,5 @@ var triangularSum = function(nums) {
 // TC => O(n^3)
 // SC => O(n)
 
+console.log(triangularSum(nums = [1,2,3,4,5]));
 

@@ -18,3 +18,27 @@
 // Explanation:
 // The above diagram depicts the process from which we obtain the triangular sum of the array.
 
+// Leetcode link: https://leetcode.com/problems/find-triangular-sum-of-an-array/description/
+
+// Solution:
+
+var triangularSum = function(nums) {
+
+    while (nums.length > 1) {
+        let temp = [];
+        for (let i = 0; i < nums.length-1; i++) {
+            let sum = nums[i] + nums[i+1];
+            let rem = sum % 10;
+            temp.push(rem);
+        }
+        nums = [...temp];
+    }
+
+    return nums[0];
+
+};
+
+// TC => O(n^3)
+// SC => O(n)
+
+

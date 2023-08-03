@@ -23,4 +23,32 @@
 // The relative ordering of the elements less than and greater than pivot is also maintained. 
 // [9, 5, 3] and [12, 14] are the respective orderings.
 
+// Leetcode link: https://leetcode.com/problems/partition-array-according-to-given-pivot/description/
+
+// Solution:
+
+var pivotArray = function(nums, pivot) {
+    
+    let output = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] < pivot) {
+            output.push(nums[i])
+        }
+    }
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] == pivot) {
+            output.push(nums[i])
+        }
+    }
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > pivot) {
+            output.push(nums[i])
+        }
+    }
+
+    return output;
+
+};
+
 

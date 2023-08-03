@@ -11,3 +11,10 @@
 
 // Return the triangular sum of nums.
 
+// Example 1:
+
+// Input: nums = [1,2,3,4,5]
+// Output: 8
+// Explanation:
+// The above diagram depicts the process from which we obtain the triangular sum of the array.
+

@@ -49,4 +49,5 @@ var processQueries = function(queries, m) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(processQueries(queries = [3,1,2,1]));
 

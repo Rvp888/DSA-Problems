@@ -80,3 +80,6 @@ var garbageCollection = function(garbage, travel) {
 
 };
 
+console.log(garbageCollection(garbage = ["G","P","GP","GG"], travel = [2,4,3]));
+
+

@@ -52,3 +52,4 @@ var rearrangeArray = function(nums) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(rearrangeArray(nums = [3,1,-2,-5,2,-4]));

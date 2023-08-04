@@ -38,3 +38,45 @@
 // Since there is no metal garbage, we do not need to consider the metal garbage truck.
 // Therefore, it takes a total of 8 + 13 = 21 minutes to collect all the garbage.
 
+// Leetcode link: https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/
+
+// Solution:
+
+var garbageCollection = function(garbage, travel) {
+    
+    let totalUnits = garbage.join("").length;
+    let lastHmOfM = 0, lastHmOfP = 0, lastHmOfG = 0;
+    let travelOfM = 0, travelOfP = 0, travelOfG = 0;
+
+    for (let i = 0; i < garbage.length; i++) {
+        let home = garbage[i];
+        if (home.includes("M")) {
+            lastHmOfM = i;
+        }
+        if (home.includes("P")) {
+            lastHmOfP = i;
+        }
+        if (home.includes("G")) {
+            lastHmOfG = i;
+        }
+    }
+
+    for (let i = 0; i < travel.length; i++) {
+        if (lastHmOfM) {
+            travelOfM += travel[i];
+            lastHmOfM--;
+        }
+        if (lastHmOfP) {
+            travelOfP += travel[i];
+            lastHmOfP--;
+        }
+        if (lastHmOfG) {
+            travelOfG += travel[i];
+            lastHmOfG--;
+        }
+    }
+
+    return totalUnits + travelOfM + travelOfP + travelOfG;
+
+};
+

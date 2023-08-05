@@ -65,3 +65,6 @@ var wateringPlants = function(plants, capacity) {
 // TC => O(n);
 // SC => O(1);
 
+console.log(wateringPlants(plants = [2,2,3,3], capacity = 5));
+
+

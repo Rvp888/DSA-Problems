@@ -31,3 +31,41 @@
 // In the 1st query, the subarray is [4,6,5,9]. This cannot be rearranged as an arithmetic sequence.
 // In the 2nd query, the subarray is [5,9,3,7]. This can be rearranged as [3,5,7,9], which is an arithmetic sequence.
 
+// Leetcode link: https://leetcode.com/problems/arithmetic-subarrays/description/
+
+// Solution:
+
+var checkArithmeticSubarrays = function(nums, l, r) {
+
+    let result = [];
+    let size = l.length;
+
+    for (let i = 0; i < size; i++) {
+        let subArr = nums.slice(l[i], r[i]+1);
+        let ans = isArithmetic(subArr);
+        result.push(ans);
+    }
+
+    return result;
+    
+    function isArithmetic (subArr) {
+        subArr.sort((a, b) => a - b);
+        let diffs = [];
+        for (let i = 0; i < subArr.length-1; i++) {
+            let diff = subArr[i] - subArr[i+1];
+            if (diffs.length == 0) {
+                diffs.push(diff);
+            }
+            else if (!diffs.includes(diff)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+
+

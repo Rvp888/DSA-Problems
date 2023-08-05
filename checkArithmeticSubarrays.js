@@ -68,4 +68,5 @@ var checkArithmeticSubarrays = function(nums, l, r) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(checkArithmeticSubarrays(nums = [4,6,5,9,3,7], l = [0,0,2], r = [2,3,5])); 
 

@@ -16,3 +16,28 @@
 // ith plant needs, and an integer capacity representing the watering can capacity, return the number 
 // of steps needed to water all the plants.
 
+// Leetcode link: https://leetcode.com/problems/watering-plants/description/
+
+// Solution:
+
+var wateringPlants = function(plants, capacity) {
+    
+    let steps = 0;
+    let refill = capacity;
+
+    for (let i = 0; i < plants.length; i++) {
+        steps++;
+        capacity -= plants[i];
+        if (capacity < plants[i+1]) {
+            steps = steps + ((i+1)*2);
+            capacity = refill;
+        }
+    }
+
+    return steps;
+
+};
+
+// TC => O(n);
+// SC => O(1);
+

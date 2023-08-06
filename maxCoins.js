@@ -31,3 +31,54 @@
 // Input: piles = [9,8,7,6,5,1,2,3,4]
 // Output: 18
 
+// Leetcode link: https://leetcode.com/problems/maximum-number-of-coins-you-can-get/description/
+
+// Solution:
+
+var maxCoins = function(piles) {
+
+    let result = 0;
+    piles.sort((a, b) => a - b);
+    
+    while (piles.length) {
+        let max = piles[piles.length-1];
+        piles.pop();
+        let secMax = piles[piles.length-1];
+        piles.pop();
+        piles.shift();
+        result += secMax;
+    }
+
+    return result;
+
+};
+
+// TC => O(n^2)
+// SC => O(1)
+
+
+// var maxCoins = function(piles) {
+
+//     let result = 0;
+    
+//     while (piles.length) {
+//         let max = Math.max(...piles);
+//         let maxIndex = piles.indexOf(max);
+//         piles.splice(maxIndex, 1);
+
+//         let secMax = Math.max(...piles);
+//         let secMaxIndex = piles.indexOf(secMax);
+//         piles.splice(secMaxIndex, 1);
+
+//         let min = Math.min(...piles);
+//         let minIndex = piles.indexOf(min);
+//         piles.splice(minIndex, 1);
+
+//         result += secMax;
+//     }
+
+//     return result;
+
+// };
+
+// Time Limit Exceeds

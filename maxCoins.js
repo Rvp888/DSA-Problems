@@ -33,7 +33,7 @@
 
 // Leetcode link: https://leetcode.com/problems/maximum-number-of-coins-you-can-get/description/
 
-// Solution:
+// Solution-1:
 
 var maxCoins = function(piles) {
 
@@ -58,6 +58,7 @@ var maxCoins = function(piles) {
 
 console.log(maxCoins(piles = [9,8,7,6,5,1,2,3,4]));
 
+// Solution-2:
 
 // var maxCoins = function(piles) {
 

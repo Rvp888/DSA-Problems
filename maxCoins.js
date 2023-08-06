@@ -56,6 +56,8 @@ var maxCoins = function(piles) {
 // TC => O(n^2)
 // SC => O(1)
 
+console.log(maxCoins(piles = [9,8,7,6,5,1,2,3,4]));
+
 
 // var maxCoins = function(piles) {
 

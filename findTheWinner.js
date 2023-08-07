@@ -60,3 +60,8 @@ var findTheWinner = function(n, k) {
 
 };
 
+// TC => O(n^2)
+// SC => O(n)
+
+console.log(findTheWinner(n = 5, k = 2));
+

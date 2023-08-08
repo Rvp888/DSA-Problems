@@ -55,4 +55,9 @@ var deckRevealedIncreasing = function(deck) {
 
 };
 
+// TC => O(n^2)
+// SC => O(n)
+
+console.log(deckRevealedIncreasing(deck = [17,13,11,2,3,5,7]));
+
 

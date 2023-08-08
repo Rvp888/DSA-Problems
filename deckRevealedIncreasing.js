@@ -31,3 +31,28 @@
 // We reveal 17.
 // Since all the cards revealed are in increasing order, the answer is correct.
 
+// Leetcode link: https://leetcode.com/problems/reveal-cards-in-increasing-order/description/
+
+// Solution:
+
+var deckRevealedIncreasing = function(deck) {
+    
+    deck.sort((a, b) => a - b);
+
+    let result = [];
+
+    while (deck.length) {
+
+        if (result.length) {
+            result.unshift(result.pop());
+        }
+
+        result.unshift(deck.pop());
+
+    }
+
+    return result;
+
+};
+
+

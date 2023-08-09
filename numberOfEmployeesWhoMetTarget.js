@@ -22,3 +22,21 @@
 // - Employee 4 worked for 4 hours and met the target.
 // There are 3 employees who met the target.
 
+// Leetcode link: https://leetcode.com/problems/number-of-employees-who-met-the-target/description/
+
+// Solution:
+
+var numberOfEmployeesWhoMetTarget = function(hours, target) {
+    
+    let count = 0;
+
+    for (let i = 0; i < hours.length; i++) {
+        if (hours[i] >= target) {
+            count++;
+        }
+    }
+
+    return count;
+
+};
+

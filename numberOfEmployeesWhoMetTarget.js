@@ -40,3 +40,8 @@ var numberOfEmployeesWhoMetTarget = function(hours, target) {
 
 };
 
+// TC => O(n)
+// SC => O(1)
+
+console.log(numberOfEmployeesWhoMetTarget(hours = [0,1,2,3,4], target = 2));
+

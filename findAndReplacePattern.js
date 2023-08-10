@@ -23,3 +23,33 @@
 // Input: words = ["a","b","c"], pattern = "a"
 // Output: ["a","b","c"]
 
+// Leetcode link: https://leetcode.com/problems/find-and-replace-pattern/description/
+
+// Solution:
+
+var findAndReplacePattern = function(words, pattern) {
+    
+    let result = [];
+
+    loop:for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let obj = {};
+        for (let j = 0; j < pattern.length; j++) {
+            if (obj[pattern[j]]) {
+                if (obj[pattern[j]] != word[j]) continue loop; 
+            }
+            else {
+                if (Object.values(obj).includes(word[j])) continue loop;
+                obj[pattern[j]] = word[j];
+            }
+        }
+        result.push(word);
+    }
+
+    return result;
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+

@@ -53,3 +53,4 @@ var findAndReplacePattern = function(words, pattern) {
 // TC => O(n^2)
 // SC => O(n)
 
+console.log(findAndReplacePattern(words = ["abc","deq","mee","aqq","dkd","ccc"], pattern = "abb"));

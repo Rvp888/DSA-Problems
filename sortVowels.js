@@ -21,4 +21,48 @@
 // Explanation: 'E', 'O', and 'e' are the vowels in s; 'l', 't', 'c', and 'd' are all consonants. 
 // The vowels are sorted according to their ASCII values, and the consonants remain in the same places.
 
+// Leetcode link: https://leetcode.com/problems/sort-vowels-in-a-string/description/
+
+// Solution:
+
+var sortVowels = function(s) {
+    
+    let result = "";
+    let vowelString = "aeiouAEIOU";
+    let vowels = [];
+
+    for (let i = 0; i < s.length; i++) {
+        if (vowelString.includes(s[i])) {
+            vowels.push(s[i]);
+        }
+    }
+
+    // vowels.sort(function (a, b) {
+    //     if (a.charCodeAt(0) < b.charCodeAt(0)) {
+    //         return -1;
+    //     }
+    //     else return 1;
+    // })  
+    // sorts the alphabets on the basis of their ASCII values.
+
+    vowels.sort(); // also sorts the alphabets on the basis of their ASCII values.
+
+    let j = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (vowelString.includes(s[i])) {
+            result += vowels[j];
+            j++;
+        }
+        else {
+            result += s[i];
+        }
+    }
+
+    return result;
+
+};
+
+// TC => O(n^2)
+// SC => O(n)
+
 

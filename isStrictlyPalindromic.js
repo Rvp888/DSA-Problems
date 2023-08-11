@@ -23,3 +23,38 @@
 // Explanation: We only consider base 2: 4 = 100 (base 2), which is not palindromic.
 // Therefore, we return false.
 
+// Leetcode link: https://leetcode.com/problems/strictly-palindromic-number/description/
+
+// Solution:
+
+var isStrictlyPalindromic = function(n) {
+
+    function checkPalindrome (str) {
+        let i = 0, j = str.length-1;
+        while (i < j) {
+            if (str[i] != str[j]) {
+                return false;
+            }
+            i++, j--;
+        }
+        return true;
+    }
+    
+    for (let i = 2; i <= n-2; i++) {
+        let string = "";
+        let num = n;
+        while (num > 0) {
+            let modulus = num % i;
+            string = modulus + string;
+            let quotient = Math.floor(num / i);
+            num = quotient;
+        }
+        let isPalindrome = checkPalindrome(string);
+        if (isPalindrome == false) {
+            return false;
+        }
+    }
+
+    return true;
+
+};

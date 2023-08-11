@@ -58,3 +58,9 @@ var isStrictlyPalindromic = function(n) {
     return true;
 
 };
+
+// TC => O(n^2)
+// SC => O(n)
+
+console.log(isStrictlyPalindromic(n = 9));
+

@@ -13,4 +13,28 @@
 // - (2, 3): "77" + "77"
 // - (3, 2): "77" + "77"
 
+// Leetcode link: https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target/description/
+
+// Solution:
+
+var numOfPairs = function(nums, target) {
+
+    let count = 0;
+    
+    for (let i = 0; i < nums.length; i++) {
+        let str1 = nums[i];
+        for (let j = 0; j < nums.length; j++) {
+            if (j != i) {
+                let str2 = nums[j];
+                if (str1 + str2 == target) {
+                    count++;
+                }
+            } 
+        }
+    }
+
+    return count;
+
+};
+
 

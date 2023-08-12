@@ -37,4 +37,7 @@ var numOfPairs = function(nums, target) {
 
 };
 
+// TC => O(n^2)
+// SC => O(1)
+
 

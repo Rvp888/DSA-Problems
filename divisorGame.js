@@ -23,3 +23,26 @@
 // Input: n = 3
 // Output: false
 // Explanation: Alice chooses 1, Bob chooses 1, and Alice has no more moves.
+
+// Leetcode link: https://leetcode.com/problems/divisor-game/description/
+
+// Solution:
+
+var divisorGame = function (n) {
+  let count = 0;
+
+  while (n > 1) {
+    let x;
+    for (x = 1; x < n; x++) {
+      if (n % x == 0) {
+        count++;
+        break;
+      }
+    }
+    n = n - x;
+  }
+
+  if (count % 2 == 0) return false;
+
+  return true;
+};

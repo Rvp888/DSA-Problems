@@ -42,3 +42,4 @@ var numOfPairs = function(nums, target) {
 
 console.log(numOfPairs(nums = ["777","7","77","77"], target = "7777"));
 
+

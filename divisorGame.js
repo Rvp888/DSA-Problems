@@ -46,3 +46,8 @@ var divisorGame = function (n) {
 
   return true;
 };
+
+// TC => O(n^2)
+// SC => O(1)
+
+console.log(divisorGame((n = 3)));

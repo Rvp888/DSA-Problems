@@ -22,3 +22,45 @@
 // Input: s = "night", t = "thing"
 // Output: 0
 // Explanation: The given strings are already anagrams of each other. Thus, we do not need any further steps.
+
+// Leetcode Link: https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/description/
+
+// Solution:
+
+var minSteps = function (s, t) {
+  let objS = {},
+    objT = {};
+
+  for (let i = 0; i < s.length; i++) {
+    let char = s[i];
+    objS[char] = objS[char] + 1 || 1;
+  }
+
+  for (let i = 0; i < t.length; i++) {
+    let char = t[i];
+    if (objS[char]) objS[char] -= 1;
+  }
+
+  for (let i = 0; i < t.length; i++) {
+    let char = t[i];
+    objT[char] = objT[char] + 1 || 1;
+  }
+
+  for (let i = 0; i < s.length; i++) {
+    let char = s[i];
+    if (objT[char]) objT[char] -= 1;
+  }
+
+  let values1 = Object.values(objS);
+  let values2 = Object.values(objT);
+
+  let sum1 = values1.reduce((sum, val) => sum + val);
+  let sum2 = values2.reduce((sum, val) => sum + val);
+
+  return sum1 + sum2;
+};
+
+// TC => O(n)
+// SC => O(n)
+
+console.log(minSteps((s = "leetcode"), (t = "coats")));

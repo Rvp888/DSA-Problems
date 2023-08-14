@@ -26,3 +26,12 @@
 // 1- Decrease x by 1, and increase num by 1. Now, x = 6 and num = 4.
 // 2- Decrease x by 1, and increase num by 1. Now, x = 5 and num = 5.
 // It can be proven that there is no achievable number larger than 7.
+
+// Leetcode Link: https://leetcode.com/problems/find-the-maximum-achievable-number/description/
+
+var theMaximumAchievableX = function (num, t) {
+  return num + t * 2;
+};
+
+// TC => O(1)
+// SC => O(1)

@@ -35,3 +35,5 @@ var theMaximumAchievableX = function (num, t) {
 
 // TC => O(1)
 // SC => O(1)
+
+console.log(theMaximumAchievableX((num = 3), (t = 2)));

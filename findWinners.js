@@ -33,3 +33,44 @@
 // Players 1, 2, 5, and 6 have not lost any matches.
 // Players 3 and 4 each have lost two matches.
 // Thus, answer[0] = [1,2,5,6] and answer[1] = [].
+
+// Leetcode link: https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/
+
+// Solution:
+
+var findWinners = function (matches) {
+  let winners = {};
+  let loosers = {};
+
+  for (let i = 0; i < matches.length; i++) {
+    let [winner, looser] = matches[i];
+    if (winners[winner] == undefined) {
+      winners[winner] = 1;
+    }
+    if (loosers[looser] == undefined) {
+      loosers[looser] = 1;
+    } else {
+      loosers[looser]++;
+    }
+  }
+
+  let loosersArray = Object.keys(loosers);
+
+  for (let i = 0; i < loosersArray.length; i++) {
+    let looser = loosersArray[i];
+    if (winners[looser]) {
+      delete winners[looser];
+    }
+  }
+
+  let playersWithNoLose = Object.keys(winners);
+
+  let playersWithOneLose = loosersArray.filter(
+    (looser) => loosers[looser] == 1
+  );
+
+  return [playersWithNoLose, playersWithOneLose];
+};
+
+// TC => O(n)
+// SC => O(n)

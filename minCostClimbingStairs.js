@@ -51,3 +51,5 @@ var minCostClimbingStairs = function (cost) {
 
 // TC => O(n)
 // SC => )(1)
+
+console.log(minCostClimbingStairs((cost = [10, 15, 20])));

@@ -27,3 +27,27 @@
 // - Pay 1 and climb two steps to reach index 9.
 // - Pay 1 and climb one step to reach the top.
 // The total cost is 6.
+
+// Leetcode link: https://leetcode.com/problems/min-cost-climbing-stairs/description/
+
+// Solution:
+
+var minCostClimbingStairs = function (cost) {
+  if (cost.length === 1) return cost[0];
+  if (cost.length === 2) return Math.min(cost[0], cost[1]);
+
+  let minCost1 = cost[0];
+  let minCost2 = cost[1];
+
+  for (let i = 2; i < cost.length; i++) {
+    let newMinCost = cost[i] + Math.min(minCost1, minCost2);
+
+    minCost1 = minCost2;
+    minCost2 = newMinCost;
+  }
+
+  return Math.min(minCost1, minCost2);
+};
+
+// TC => O(n)
+// SC => )(1)

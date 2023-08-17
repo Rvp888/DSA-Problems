@@ -25,3 +25,40 @@
 // Leetcode link: https://leetcode.com/problems/subdomain-visit-count/description/
 
 // Solution:
+
+var subdomainVisits = function (cpdomains) {
+  let result = [];
+  let obj = {};
+
+  for (let i = 0; i < cpdomains.length; i++) {
+    let str = cpdomains[i];
+    let num = parseFloat(str);
+    let id = str.split(" ")[1];
+    let subDomains = id.split(".");
+    while (subDomains.length) {
+      let subDom = "";
+      for (let j = subDomains.length - 1; j >= 0; j--) {
+        if (j > 0) {
+          subDom = "." + subDomains[j] + subDom;
+        } else {
+          subDom = subDomains[j] + subDom;
+        }
+      }
+
+      if (obj[subDom]) {
+        obj[subDom] += num;
+      } else {
+        obj[subDom] = num;
+      }
+
+      subDomains.shift();
+    }
+  }
+
+  for (let key in obj) {
+    let str = `${obj[key]} ${key}`;
+    result.push(str);
+  }
+
+  return result;
+};

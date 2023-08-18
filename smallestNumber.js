@@ -49,3 +49,6 @@ var smallestNumber = function (pattern) {
 
   return result;
 };
+
+// TC => O(n^2)
+// SC => O(n)

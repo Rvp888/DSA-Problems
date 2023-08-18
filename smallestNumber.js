@@ -29,3 +29,23 @@
 // Explanation:
 // Some possible values of num are "9876", "7321", and "8742".
 // It can be proven that "4321" is the smallest possible num that meets the conditions.
+
+// Leetcode link: https://leetcode.com/problems/construct-smallest-number-from-di-string/description/
+
+// Solution:
+
+var smallestNumber = function (pattern) {
+  let result = "";
+  let stack = [];
+
+  for (let i = 0; i < pattern.length + 1; i++) {
+    stack.push(i + 1);
+    if (pattern[i] === "I" || i === pattern.length) {
+      while (stack.length) {
+        result += stack.pop();
+      }
+    }
+  }
+
+  return result;
+};

@@ -63,6 +63,9 @@ var subdomainVisits = function (cpdomains) {
   return result;
 };
 
+// TC => O(n^3)
+// SC => O(n)
+
 console.log(
   subdomainVisits(
     (cpdomains = [

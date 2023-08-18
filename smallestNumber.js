@@ -52,3 +52,5 @@ var smallestNumber = function (pattern) {
 
 // TC => O(n^2)
 // SC => O(n)
+
+console.log(smallestNumber((pattern = "IIIDIDDD")));

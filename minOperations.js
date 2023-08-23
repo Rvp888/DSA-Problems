@@ -20,3 +20,20 @@
 
 // Input: n = 6
 // Output: 9
+
+// Leetcode link: https://leetcode.com/problems/minimum-operations-to-make-array-equal/description/
+
+// Solution:
+
+var minOperations = function (n) {
+  let count = 0;
+
+  for (let i = 0; i < n; i++) {
+    let num = 2 * i + 1;
+    if (num < n) {
+      count += n - num;
+    } else {
+      return count;
+    }
+  }
+};

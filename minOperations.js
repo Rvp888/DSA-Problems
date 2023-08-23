@@ -7,3 +7,16 @@
 // that all the elements of the array can be made equal using some operations.
 
 // Given an integer n, the length of the array, return the minimum number of operations needed to make all the elements of arr equal.
+
+// Example 1:
+
+// Input: n = 3
+// Output: 2
+// Explanation: arr = [1, 3, 5]
+// First operation choose x = 2 and y = 0, this leads arr to be [2, 3, 4]
+// In the second operation choose x = 2 and y = 0 again, thus arr = [3, 3, 3].
+
+// Example 2:
+
+// Input: n = 6
+// Output: 9

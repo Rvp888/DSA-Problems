@@ -37,3 +37,5 @@ var minOperations = function (n) {
     }
   }
 };
+
+console.log(minOperations((n = 6)));

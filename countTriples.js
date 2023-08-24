@@ -36,3 +36,6 @@ var countTriples = function (n) {
 };
 
 console.log(countTriples((n = 10)));
+
+// TC => O(n^2)
+// SC => O(1)

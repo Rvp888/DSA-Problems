@@ -50,3 +50,5 @@ var countOperations = function (num1, num2) {
 
 // TC => O(n)
 // SC => O(1)
+
+console.log(countOperations((num1 = 2), (num2 = 3)));

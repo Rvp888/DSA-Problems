@@ -28,3 +28,25 @@
 // - Operation 1: num1 = 10, num2 = 10. Since num1 == num2, we subtract num2 from num1 and get num1 = 10 - 10 = 0.
 // Now num1 = 0 and num2 = 10. Since num1 == 0, we are done.
 // So the total number of operations required is 1.
+
+// Leetcode link: https://leetcode.com/problems/count-operations-to-obtain-zero/description/
+
+// Solution:
+
+var countOperations = function (num1, num2) {
+  let count = 0;
+
+  while (num1 > 0 && num2 > 0) {
+    if (num1 >= num2) {
+      num1 = num1 - num2;
+    } else {
+      num2 = num2 - num1;
+    }
+    count++;
+  }
+
+  return count;
+};
+
+// TC => O(n)
+// SC => O(1)

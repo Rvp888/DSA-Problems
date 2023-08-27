@@ -20,25 +20,27 @@
 
 // Solution-1:
 
-// var countTriples = function (n) {
-//   let result = 0;
+var countTriples = function (n) {
+  let result = 0;
 
-//   for (let a = 3; a < n; a++) {
-//     for (let b = a + 1; b < n; b++) {
-//       let c = Math.sqrt(a * a + b * b);
-//       if (Number.isInteger(c) && c <= n) {
-//         result += 2;
-//       }
-//     }
-//   }
+  for (let a = 3; a < n; a++) {
+    for (let b = a + 1; b < n; b++) {
+      let c = Math.sqrt(a * a + b * b);
+      if (Number.isInteger(c) && c <= n) {
+        result += 2;
+      }
+    }
+  }
 
-//   return result;
-// };
+  return result;
+};
 
-// console.log(countTriples((n = 10)));
+console.log(countTriples((n = 10)));
 
 // TC => O(n^2)
 // SC => O(1)
+
+// -----------------------------------------
 
 // Solution-2:
 

@@ -23,3 +23,29 @@
 // 3 --> 11
 // 4 --> 100
 // 5 --> 101
+
+// Leetcode link: https://leetcode.com/problems/counting-bits/description/
+
+// Solution:
+
+var countBits = function (n) {
+  let result = [];
+
+  for (let i = 0; i <= n; i++) {
+    if (i === 0) result.push(0);
+    else {
+      let temp = i;
+      let count = 0;
+      while (temp > 1) {
+        let mod = temp % 2;
+        if (mod === 1) count++;
+        let quot = Math.floor(temp / 2);
+        temp = quot;
+      }
+      count++;
+      result.push(count);
+    }
+  }
+
+  return result;
+};

@@ -49,3 +49,5 @@ var countBits = function (n) {
 
   return result;
 };
+
+console.log(countBits((n = 5)));
